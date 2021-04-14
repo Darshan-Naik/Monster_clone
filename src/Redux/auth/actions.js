@@ -1,5 +1,5 @@
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
-import axios from "axios"
+import { auth } from "../../Utils/fireBase"
 
 //Login actions--------------->
 
@@ -49,29 +49,43 @@ const registerSuccess=(payload)=>{
 
 // Login network request -----> 
 
-const login=(payload)=>(dispatch)=>{
+const login=({email,password})=>(dispatch)=>{
     dispatch(loginRequest())
-    return axios.get("URL")
-    .then (res=>{
-        dispatch(loginSuccess(res.data))
-    })
-    .catch(()=>{
-        dispatch(loginFailure())
-    })
+    return auth.signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    const user = userCredential.user;
+    dispatch(loginSuccess(user))
+  })
+  .catch((error) => {
+    dispatch(loginFailure(error.message))
+  });
 }
 
 // Register network request -----> 
 
-const register=(payload)=>(dispatch)=>{
+const register=({email,password,...info})=>(dispatch)=>{
+    console.log(email,password)
     dispatch(registerRequest())
-    return axios.post("URL")
-    .then (res=>{
-        dispatch(registerSuccess(res.data))
+
+    return auth.createUserWithEmailAndPassword(email,password)
+    .then(()=>{
+        updateUser(info)
     })
     .catch(()=>{
         dispatch(registerFailure())
     })
 }
+// Update profile network request -----> 
 
+const updateUser =({displayName})=>(dispatch)=>{
+        auth.currentUser.updateProfile({
+        displayName
+      }).then((res)=> {
+        dispatch(registerSuccess(auth.currentUser))
+      }).catch(()=> {
+        dispatch(registerFailure())
+      });
+}
 
 export {register,login,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess}
