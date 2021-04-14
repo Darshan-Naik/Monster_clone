@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
 import ErrorPage from '../Pages/ErrorPage'
 import Home from '../Pages/Home'
+import { Login } from '../Pages/Login'
 
 function Router() {
     return (
@@ -12,6 +13,10 @@ function Router() {
             <Switch>
                 <Route path="/" exact>
                     <Home />
+                </Route>
+                <Route path="/login">
+                    <Login/>
+
                 </Route>
 
 
