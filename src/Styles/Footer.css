@@ -1,0 +1,120 @@
+.footer-part-1 {
+    /* border: 2px solid red; */
+    padding: 2% 0%;
+    background-color: rgb(245,245,245);
+}
+
+.subflex {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    width: 83%;
+    padding: 0% 2%;
+    box-sizing: border-box;
+}
+
+.subflex > a {
+    color: black;
+    text-decoration: none;
+}
+
+.subflex > a:hover {
+    color: #5d4da8;
+}
+
+.flex {
+    display: flex;
+    /* border: 2px solid red; */
+    padding: 0.5% 7%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.flex > a {
+    color: #5d4da8;
+    text-decoration: none;
+}
+
+.flex2 {
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-around;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: rgb(245,245,245);
+}
+
+.flex2 li {
+    list-style: none;
+    text-align: left;
+}
+
+.flex2 > div {
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+}
+
+.flex2 > div:nth-child(1), .flex2 > div:nth-child(3) {
+    padding: 2% 0%;
+}
+
+.flex2 select {
+    padding: 0% 20%;
+} 
+
+.flex3 {
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-around;
+    text-align: left;
+    text-decoration: none;
+    background-color: rgb(93,77,168);
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 2% 0%;
+}
+
+.flex3 li {
+    list-style: none;
+}
+
+.flex3 a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.flex3 a:hover {
+    text-decoration: underline;
+}
+
+.flex3 > ul {
+    font-weight: bold;
+    color: white;
+}
+
+.icon {
+    /* border: 2px solid red; */
+    width: max-content;
+    position: absolute;
+    left: 8px;
+    Top: 18px;
+    background-color: #5d4da8;
+    padding: 2% 3%;
+    border-radius: 50%;
+}
+
+.relative {
+    position: relative;
+}
+
+.icon2 {
+    /* border: 2px solid red; */
+    width: max-content;
+    position: absolute;
+    left: -36px;
+    Top: 24px;
+    background-color: #5d4da8;
+    padding: 3% 5%;
+    border-radius: 50%;
+}
