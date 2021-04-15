@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../Styles/JobSearch.css'
 
-import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from './../../Utils/Localdata';
+import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from '../../Utils/LocalData';
 
 import { useHistory } from 'react-router';
 const init={
@@ -95,19 +95,19 @@ const handleSubmit=(e)=>{
                   </form>
               <div className="searchjob_searchTipBody">
                 <p>search Tips</p>
-              {/* { Tips.map( <div className="searchTip_body">
+              { Tips.map((item)=> <div className="searchTip_body">
                 <div className="tipImage_body">
                 <img src="" alt="logo"/>
                 </div>
                 <div className="tipbox">
                <div className="tips">
-                   {Tips.map((item)=> <p>{item}</p>)}
+                <p>{item.title}</p>
                </div>
                <div className="tipData">
-               { <p>{item}</p>)}
+               <p>{item.details}</p>
                </div>
                </div> 
-               </div>)} */}
+               </div>)}
               </div>
 
           </div>
