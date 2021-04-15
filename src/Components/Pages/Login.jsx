@@ -47,9 +47,13 @@ export const Login = () => {
         <span>You are just a step away from your dream job</span>
         <br />
         <form onSubmit={handleSubmit}>
-          <input className={styles.inp} placeholder="Email/Mobile No." type="text" />
+          <input className={styles.inp} placeholder="Email/Mobile No." type="text"  onChange={e => {
+              setEmail(e.target.value);
+            }} />
           <br />
-          <input className={styles.inp} type="password" placeholder="Password" />
+          <input className={styles.inp} type="password" placeholder="Password"  onChange={e => {
+              setPassword(e.target.value);
+            }} />
           <br />
           <span style={{ textAlign: "right" }}>
             <Link>Forgot password</Link>
