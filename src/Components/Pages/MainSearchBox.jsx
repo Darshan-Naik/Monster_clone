@@ -1,13 +1,23 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import "../../Styles/MainSearchBox.css"
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+
 function MainSearchBox() {
 const [query,setQuery] = React.useState("")
 const history = useHistory()
+const { transcript, resetTranscript } = useSpeechRecognition()
 const handleSearch = ()=>{
         if(query){
             history.push("/result/"+query)
         }
+}
+React.useEffect(()=>{
+    setQuery(transcript)
+},[transcript])
+const handleVoice=()=>{
+    resetTranscript()
+    SpeechRecognition.startListening()    
 }
 
     return (
@@ -26,7 +36,7 @@ const handleSearch = ()=>{
                         <div className="SearchBarInputs">
                             <img width="20px" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="search"/>
                             <input type="text" placeholder= "Search by skills company & job title" value={query} onChange={(e)=>setQuery(e.target.value)} /> 
-                            <img width="20px" src="https://static.thenounproject.com/png/755355-200.png" alt="search"/>                  
+                            <img width="20px" src="https://static.thenounproject.com/png/755355-200.png" alt="search" onClick={handleVoice}/>                  
                             <button onClick={handleSearch}>Search</button>
                         </div>
                         <div className="advanceSearchButton">              
