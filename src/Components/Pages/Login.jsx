@@ -3,101 +3,29 @@ import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
-import styles from "./../css/Login.module.css"
-// const LoginFlex = styled.div`
-//   display: grid;
-//   width: 69%;
-//   height: 600px;
-//   grid-template: "cr lf";
-//   margin: auto;
-//   margin-top: 20px;
-// `;
+import styles from "./../css/Login.module.css";
+import {useDispatch} from "react-redux"
+import { register } from "../../Redux/auth/actions";
 
-// const Car = styled.div`
-//   grid-area: cr;
-//   width: 70%;
-//   height: 500px;
-//   margin-top: 100px;
-// `;
-// const LogFm = styled.div`
-//   grid-area: lf;
-//   max-height: 600px;
-//   width: 100%;
-//   box-shadow: 2px 2px 10px 1px #000000;
-//   text-align: left;
-//   padding: 20px;
-// `;
-// const Img = styled.img`
-//   width: 250px;
-//   height: 250px;
-// `;
-// const H2 = styled.h2`
-//   margin: 0px;
-//   font-size: 28px;
-//   font-weight: 600px;
-//   color: blue;
-// `;
-// const H4 = styled.h4`
-//   margin: 5px;
-// `;
-// const Input = styled.input`
-//   width: 90%;
-//   height: 30px;
-//   color: black;
-//   background-color: #f8f7f7;
-//   margin: 15px 0px;
-//   border: 1px solid #474646;
-//   padding: 10px;
-// `;
-// const Span = styled.span`
-//   font-size: 14px;
-// `;
-
-// const Button = styled.button`
-//   width: 98%;
-//   color: whitesmoke;
-//   height: 40px;
-//   background-color: #3f1bc0;
-//   border-radius: 10px;
-//   font-size: 20px;
-//   margin: auto;
-//   margin-top: 2%;
-//   :hover& {
-//     background-color: #03032e;
-//   }
-// `;
-// const Icon = styled.img`
-//   width: 50px;
-//   height: 30px;
-//   border-radius: 50%;
-// `;
-const Socials = styled.span`
-  font-size: 16px;
-  width: 90px;
-  align-items: left;
-  margin-right: 100px;
-`;
-const Signbutton = styled.button`
-  width: 100%;
-  color: #0826bb;
-  height: 40px;
-  background-color: #fbf9fc;
-  border-radius: 10px;
-  font-size: 20px;
-  margin: auto;
-  margin: 20px 0px;
-  :hover& {
-    background-color: #0909ce;
-    color: white;
-  }
-`;
 export const Login = () => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const dispatch=useDispatch()
+  const handleSubmit = e => {
+    e.preventDefault();
+    var payload = {
+      email,
+      password
+    };
+    dispatch(register(payload))
+    
+  };
   return (
     <div className={styles.loginflex}>
       <div className={styles.car}>
         <Carousel>
           <div>
-            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg"/>
+            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg" />
             <h2 className={styles.head2}>Job Alerts</h2>
             <span>Get real time alerts now for hot new Jobs</span>
           </div>
@@ -118,16 +46,18 @@ export const Login = () => {
         <h2>Welcome Back</h2>
         <span>You are just a step away from your dream job</span>
         <br />
-        <input className={styles.inp} placeholder="Email/Mobile No." type="text" />
-        <br />
-        <input className={styles.inp} type="password" placeholder="Password" />
-        <br />
-        <span  style={{ textAlign: "right" }}>
-          <Link>Forgot password</Link>
-        </span>
-        <br />
-        <button className={styles.btn}>Login</button>
-        <br />
+        <form onSubmit={handleSubmit}>
+          <input className={styles.inp} placeholder="Email/Mobile No." type="text" />
+          <br />
+          <input className={styles.inp} type="password" placeholder="Password" />
+          <br />
+          <span style={{ textAlign: "right" }}>
+            <Link>Forgot password</Link>
+          </span>
+          <br />
+          <input type="submit" className={styles.btn} value="Login"/>
+          <br />
+        </form>
         <div className={styles.extra} style={{ textAlign: "center", fontSize: "20px" }}>
           <span>Or</span>
           <br />
@@ -145,7 +75,6 @@ export const Login = () => {
           </div>
           <hr />
           <Link to={"/seeker/registration"}>
-            
             <button className={styles.btn2}>New to Monster? Sign Up</button>
           </Link>
         </div>

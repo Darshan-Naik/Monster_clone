@@ -1,0 +1,149 @@
+.MainSearchBox{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.5)),
+    url("https://media.monsterindia.com/trex/public/default/images/hero-img.jpg?210120191234");
+    background-size: cover;
+    padding: 30px;
+}
+.MainSearchBox>h1{
+    color: white;
+    margin: 0;
+    font-weight: 500;
+}
+.SearchBar{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+}
+.SearchBarButtons>button{
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+.SearchBarButtons>button:hover{
+    border-bottom: 2px solid white;
+}
+.SearchBarInputs{
+    background-color: white;
+    border: 1px solid 4a2189;
+    width: fit-content;
+    margin:10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.SearchBarInputs>input{
+    background-color: transparent;
+    border: none;
+    min-width: 350px;
+    padding: 10px;
+    color: black;
+}
+.SearchBarInputs>button{
+    background-color: #5d4da8;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    width: 100px;
+
+}
+
+.SearchBarInputs>button:hover{
+    background-color: #4a2189;
+}
+.SearchBarInputs img{
+    padding: 0 5px;
+    cursor: pointer;
+}
+.SearchBar *{
+    color: white;
+    transition: all 200ms;
+}
+.TrendingSearch{
+    width: 550px;
+}
+.SearchBarButtons .alertButton{
+    background-color: #e16f62;
+    padding:10px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+.alertButton:hover{
+    background-color: #d43826;
+    border-bottom: none!important;
+}
+.advanceSearchButton{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+}
+.advanceSearchButton>a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.advanceSearchButton>a:hover{
+    text-decoration: underline;
+}
+.TrendingSearch>small:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+.registerBox{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.registerBox>div{
+    background-color: white;
+    margin: 5px;
+    width: 170px;
+    height: 160px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.registerBox>div *{
+    margin: 0;
+    font-size: 14px;
+}
+.registerBox>div p{
+    color: teal;
+    font-size: 12px;
+}
+.registerBox>div>a{
+    color: blue;
+    font-weight: 500;
+    font-size: 14px;
+}
+.registerBox>div h5{
+    font-size: 12px;
+    font-weight: 500;
+}
+.resumeBox{
+    background-color: #f5a623;
+    padding: 5px;
+}
+.resumeBox>*{
+    color: white!important;
+}
+.jobAlert{
+    padding: 5px;
+    border: 1px solid blue;
+}
+.jobAlert>h4{
+    color: blue;
+}
+.voiceOn{
+    height: 20px;
+    box-shadow: 0px 0px 20px red;
+    border-radius: 50%; 
+}

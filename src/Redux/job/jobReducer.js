@@ -1,6 +1,4 @@
-import store from "../store"
-import { GET_JOB_FAILURE, GET_JOB_REQUEST, GET_JOB_SUCCESS } from "./actions"
-
+import { GET_JOB_FAILURE, GET_JOB_REQUEST, GET_JOB_SUCCESS } from "./actionTypes"
 
 const init ={
     isLoading : false,
