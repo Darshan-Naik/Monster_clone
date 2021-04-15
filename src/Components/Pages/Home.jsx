@@ -1,9 +1,11 @@
 import React from 'react'
+import MainSearchBox from './MainSearchBox'
 
 function Home() {
     return (
         <div>
-            <h1>Monster Home</h1>
+            <MainSearchBox />
+
         </div>
     )
 }

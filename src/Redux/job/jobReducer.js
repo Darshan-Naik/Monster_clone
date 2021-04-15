@@ -1,7 +1,4 @@
-
 import { GET_JOB_FAILURE, GET_JOB_REQUEST, GET_JOB_SUCCESS } from "./actionTypes"
-import store from './../store';
-
 
 const init ={
     isLoading : false,
