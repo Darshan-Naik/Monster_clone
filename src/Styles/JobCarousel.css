@@ -1,25 +1,25 @@
 .carouselBox{
     display: flex;
     overflow: auto;
-    padding:0 50px;
     width: 90%;
     margin: auto;
-    position: relative;
     box-sizing: border-box;
     background-color: white;
+    scroll-behavior: smooth;
+    transition: all 300ms ease-in-out;
 }
 .carouselBox::-webkit-scrollbar{
     visibility: hidden;
 }
 .jobCards{
     width: 150px;
-    border: 1px solid rgba(110, 109, 109, 0.322);
+    border: 1px solid rgba(110, 109, 109, 0.164);
     border-radius: 2px;
     margin: 0 10px;
     background-color: #f5f5f5;
     padding: 10px;
     text-align: left;
-    
+    cursor: pointer;
 }
 .jobCards *{
     margin: 0;
@@ -34,36 +34,39 @@
 }
 .carouselBoxMain{
     text-align: left;
-    margin:auto;
+    margin:10px auto;
     width: 1000px;
     border: 1px solid rgba(151, 151, 151, 0.322);
-    padding: 15px;
+    padding: 0 15px 25px 15px;
+    position: relative;
+    background-color: white;
+}
+.carouselBoxMain>h2{
+    font-weight: 500;;
 }
 .prevBtn{
     position: absolute;
-    left: 0px;
-    background-color: white;
-    height: 100%;
+    left: 20px;
+    top: 115px;
     display: flex;
     align-items: center;
 }
 .nextBtn{
     position: absolute;
-    right: 00px;
-    z-index: 2;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    right: 10px;
+    top: 115px;
     padding:0 10px;
 }
 .nextBtn >button,.prevBtn>button{
-
+    box-shadow: 0px 0px 10px rgb(7, 197, 197);
     padding: 5px 12px;
     border-radius: 50%;
-    border: 2px solid rgb(121, 120, 120);
+    border: none;
     font-weight: 800;
     font-size: 18px;
     background-color: white;
-
+    transition: all 300ms ease-in-out;
+}
+.nextBtn >button:hover,.prevBtn>button:hover{
+    box-shadow: -1px -1px 15px rgb(8, 196, 196);
 }

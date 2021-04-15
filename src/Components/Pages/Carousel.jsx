@@ -1,17 +1,26 @@
 import React from 'react'
 import JobCard from './JobCard'
 
-function Carousel({jobs,title}) {
+function Carousel({jobs,title,isLoading}) {
+
+const scrollBar = React.useRef()
+
+    const handleScrollLeft=(e)=>{
+       scrollBar.current.scrollLeft -= 350;
+    }
+    const handleScrollRight=()=>{
+        scrollBar.current.scrollLeft += 350;
+     }
     return (
         <div className="carouselBoxMain">
             <h2>{title}</h2>
-            <div className="carouselBox">
-                <div className="prevBtn"><button>{"<"}</button></div>
+       {isLoading?  <h4>Loading...</h4>  :( <> <div className="prevBtn"><button onClick={handleScrollLeft}>{"<"}</button></div>
+            <div ref={scrollBar}  className="carouselBox">
                 
-                {jobs.map(item=><JobCard key={item.id} {...item} />)}
-                <div className="nextBtn"><button >{">"}</button></div>
-                
+                {jobs.map(item=><JobCard  key={item.id} {...item} />)}
+           
             </div>
+            <div className="nextBtn"><button onClick={handleScrollRight} >{">"}</button></div> </>)}
         </div>
       
     )
