@@ -45,6 +45,7 @@
 .tipbox{
     float: right;
     text-align: left;
+    width: 95%;
     
 }
 .input>input{
@@ -100,6 +101,7 @@
     margin-bottom: 30px;
     color: white;
     font-weight: 500;
+    outline: none;
 }
 .search_button:hover{
     background: rgb(44, 19, 165);
