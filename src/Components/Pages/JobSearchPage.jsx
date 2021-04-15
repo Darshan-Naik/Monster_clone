@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../Styles/JobSearch.css'
 
-import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from './../../Utils/Localdata';
+import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from './../../Utils/localData';
 
 import { useHistory } from 'react-router';
 const init={

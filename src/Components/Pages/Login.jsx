@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
@@ -58,14 +58,14 @@ export const Login = () => {
           <input type="submit" className={styles.btn} value="Login"/>
           <br />
         </form>
-        <div className={styles.extra} style={{ textAlign: "center", fontSize: "20px" }}>
+        <div className={styles.extra}>
           <span>Or</span>
           <br />
           <span>Login via OTP</span>
           <br />
           <hr />
           <div>
-            <Socials>Login via socials</Socials>
+            <span>Login via socials</span>
             <Link>
               <img className={styles.imIcon} src="https://www.nicepng.com/png/detail/448-4482584_fb-icon-facebook-icon.png" />
             </Link>

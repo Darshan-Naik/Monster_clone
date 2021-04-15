@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./../css/Signup.module.css";
-
+import {useDispatch} from "react-redux"
+import { login } from "../../Redux/auth/actions";
 export const Registration = ({ handleLogin }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const dispatch=useDispatch()
+
   const handleSubmit = e => {
     e.preventDefault();
     var payload = {
       email,
       password
     };
-    handleLogin(payload);
+    dispatch(login(payload))
   };
   return (
     <div className={styles.mainDiv}>
