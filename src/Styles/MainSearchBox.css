@@ -142,3 +142,8 @@
 .jobAlert>h4{
     color: blue;
 }
+.voiceOn{
+    height: 20px;
+    box-shadow: 0px 0px 20px red;
+    border-radius: 50%; 
+}
