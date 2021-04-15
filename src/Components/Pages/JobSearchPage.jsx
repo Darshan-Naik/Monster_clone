@@ -95,7 +95,7 @@ const handleSubmit=(e)=>{
                   </form>
               <div className="searchjob_searchTipBody">
                 <p>search Tips</p>
-              { Tips.map( <div className="searchTip_body">
+              {/* { Tips.map( <div className="searchTip_body">
                 <div className="tipImage_body">
                 <img src="" alt="logo"/>
                 </div>
@@ -107,7 +107,7 @@ const handleSubmit=(e)=>{
                { <p>{item}</p>)}
                </div>
                </div> 
-               </div>)}
+               </div>)} */}
               </div>
 
           </div>
