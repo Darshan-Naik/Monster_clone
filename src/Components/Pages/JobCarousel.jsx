@@ -16,9 +16,9 @@ const recentJobs = jobs.filter(item=>item.id<10 && !item.walk_in)
 const walkInJobs = jobs.filter(item=>item.walk_in)
     return (
         <div>
-        <Carousel jobs={workFromHomeJobs} title={"Work From Home Jobs"} />
-        <Carousel jobs={recentJobs} title={"Recent Jobs"} />
-        <Carousel jobs={walkInJobs} title={"Walk-in Jobs"} />
+        <Carousel jobs={workFromHomeJobs} title={"Work From Home Jobs"} isLoading={isLoading} />
+        <Carousel jobs={recentJobs} title={"Recent Jobs"} isLoading={isLoading} />
+        <Carousel jobs={walkInJobs} title={"Walk-in Jobs"}  isLoading={isLoading}/>
         </div>
         
     )

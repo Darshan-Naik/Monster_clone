@@ -4,7 +4,7 @@ import MainSearchBox from './MainSearchBox'
 
 function Home() {
     return (
-        <div>
+        <div className="HomePageBody">
             <MainSearchBox />
             <JobCarousel />
         </div>
