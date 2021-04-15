@@ -82,11 +82,11 @@ const handleSubmit=(e)=>{
                   </div>
                   <div >
                     <input list="min_salary" className='inputi' name="min_salary" placeholder='Minimum Salary' value={min_salary} onChange={handleChange} />  
-                 <datalist id="Role">
+                 <datalist id="min_salary">
                 {Minimumsalary.map((item)=><option value={item} />) }
                  </datalist>
                 <input list="max_salary" className='inputi' name="max_salary" placeholder='Maximum Salary' value={max_salary} onChange={handleChange} />  
-                 <datalist id="Role">
+                 <datalist id="max_salary">
                 {Maximumsalary.map((item)=><option value={item} />) }
                  </datalist>
                   </div>
@@ -96,15 +96,16 @@ const handleSubmit=(e)=>{
               <div className="searchjob_searchTipBody">
                 <p>search Tips</p>
               { Tips.map((item)=> <div className="searchTip_body">
-                <div className="tipImage_body">
+                {/* <div className="tipImage_body">
                 <img src="" alt="logo"/>
-                </div>
+                </div> */}
                 <div className="tipbox">
                <div className="tips">
                 <p>{item.title}</p>
                </div>
                <div className="tipData">
                <p>{item.details}</p>
+               <hr/>
                </div>
                </div> 
                </div>)}
