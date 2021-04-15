@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar'
 import ErrorPage from '../Pages/ErrorPage'
 import Home from '../Pages/Home'
 import { Login } from '../Pages/Login'
-
+import {Registration} from "./../Pages/SignUp"
 function Router() {
     return (
         <div>
@@ -18,6 +18,11 @@ function Router() {
                     <Login/>
 
                 </Route>
+                <Route path="/seeker/registration">
+                    
+                    <Registration/>
+
+                </Route>
 
 
 
@@ -27,7 +32,7 @@ function Router() {
             </Switch>
 
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
