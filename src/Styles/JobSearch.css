@@ -1,7 +1,7 @@
 .searchJob_fullBody{
-    height: 100vh;
     background-color: rgb(244,244,245);
     margin-top: -20px;
+    height: 1000px;
 
 }
 .searchJob_adv{
@@ -42,7 +42,17 @@
 .tipbox{
     float: right;
 }
-input{
+.input>input{
+    background: none;
+    border: none;
+    width: 98%;
+    margin-top: 8px;
+    margin-left: 3px;
+    font: 15px;
+    font-family: unset;
+
+}
+.inputi>input{
     background: none;
     border: none;
     width: 98%;
@@ -74,9 +84,8 @@ input{
     
 
 }
-input:focus{
-outline: none;
-}
+
+
 .search_button{
     width: 90%;
     height: 40px;
