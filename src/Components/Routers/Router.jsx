@@ -1,39 +1,48 @@
-import React from "react";
-import { Route, Switch } from "react-router";
-import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
-import ErrorPage from "../Pages/ErrorPage";
-import Home from "../Pages/Home";
-import { Jobsearch } from "../Pages/JobSearchPage";
-import { SignUp } from "./../Pages/SignUp";
-import { Login } from "../Pages/Login";
+import React from 'react'
+import { Route, Switch } from 'react-router'
+import Footer from '../Footer/Footer'
+import NavBar from '../NavBar/NavBar'
+import ErrorPage from '../Pages/ErrorPage'
+import Home from '../Pages/Home'
+import { Jobsearch } from '../Pages/JobSearchPage'
+import { Login } from '../Pages/Login'
+import Results from '../Pages/Results'
+import { SignUp } from '../Pages/SignUp'
 
 function Router() {
-  return (
-    <div>
-      <NavBar />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/job-search" exact>
-          <Jobsearch />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-              <Route path="/seeker/registration">
-                  <SignUp/>
-            </Route>
+    return (
+        <div>
+            <NavBar />
+            <Switch>
+                <Route path="/" exact>
+                    <Home />
+                </Route>
+                <Route path="/job-search" exact>
+                    <Jobsearch />
+                </Route>
+                <Route path="/result" exact>
+                    <Results />
+                </Route>
+                <Route path="/result/:id" exact>
+                    <Results />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+                <Route path="/seeker/registration">
+                    <SignUp/>
+                </Route>
 
-        <Route>
-          <ErrorPage />
-        </Route>
-      </Switch>
+                    <Route>
+                        <ErrorPage />
+                    </Route>
+                </Switch>
 
-      <Footer />
-    </div>
-  );
+
+            <Footer />
+        </div>
+    )
+
 }
 
 export default Router;

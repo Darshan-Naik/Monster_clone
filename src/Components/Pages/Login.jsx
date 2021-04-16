@@ -1,24 +1,32 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import styles from "../../Styles/Login.module.css";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { login } from "../../Redux/auth/actions";
+import { useHistory } from "react-router";
+
 
 export const Login = () => {
+  const isAuth=useSelector(state=>state.auth.isAuth)
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
+  const history = useHistory()
+
   const handleSubmit = e => {
     e.preventDefault();
     var payload = {
       email,
       password
     };
-    dispatch(login(payload))
-    
-  };
+    dispatch(login(payload)).then(()=>history.push("/"))
+  }
+      
+    if(isAuth) {
+  <Redirect to="/" />
+ }
   return (
     <div className={styles.loginflex}>
       <div className={styles.car}>
@@ -41,9 +49,9 @@ export const Login = () => {
         </Carousel>
       </div>
       <div className={styles.logFm}>
-        <h4>Hello!</h4>
+        <h2>Hello!</h2>
         <h2>Welcome Back</h2>
-        <span>You are just a step away from your dream job</span>
+        <span className={styles.spaan}>You are just a step away from your dream job</span>
         <br />
         <form onSubmit={handleSubmit}>
           <input className={styles.inp} placeholder="Email/Mobile No." type="text"  onChange={e => {
@@ -62,15 +70,15 @@ export const Login = () => {
           <br />
         </form>
         <div className={styles.extra}>
-          <span>Or</span>
+          <span className={styles.spaan}>Or</span>
           <br />
           <span>Login via OTP</span>
           <br />
           <hr />
           <div>
-            <span>Login via socials</span>
+            <span className={styles.spaan, styles.socials}>Login via socials</span>
             <Link>
-              <img className={styles.imIcon} src="https://www.nicepng.com/png/detail/448-4482584_fb-icon-facebook-icon.png" />
+              <img className={styles.imIcon} src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" />
             </Link>
             <Link>
               <img className={styles.imIcon} src=" https://cdn2.iconfinder.com/data/icons/font-awesome/1792/google-512.png" />

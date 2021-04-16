@@ -15,6 +15,9 @@ function Home() {
            <ExperTalks/>
            {/* <JobCardDetails/> */}
             <CareerTip/>
+            
+           
+            {/* <CareerTip/> */}
         </div>
     )
 }

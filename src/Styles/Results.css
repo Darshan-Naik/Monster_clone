@@ -1,0 +1,85 @@
+.resultCard{
+    max-width: 750px;
+    text-align: left;
+    margin:10px auto;
+    background-color: white;
+}
+.resultCard>div{
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.resultCard:hover{
+box-shadow: 0px 0px 10px teal;
+}
+.resultCard img{
+    width: 15px;
+}
+.space{
+ justify-content: space-between;
+}
+.resultCard h4{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+.resultCard a{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.resultCard p{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.applyNow{
+justify-content: flex-end;
+background-color: rgb(226, 226, 226);
+}
+.applyNow a{
+border: 2px solid blue;
+color: blue;
+text-decoration: none;
+font-weight: 500;
+padding:5px 10px;
+transition: all 300ms ease-in-out;
+}
+.applyNow a:hover{
+    color: white;
+    background-color: blue;
+    box-shadow: 0px 0px 10px teal;
+}
+.ResultBody{
+    display: flex;
+    justify-content: center;
+}
+.appliedFiltersList{
+ text-align: left;
+ font-size: 12px;
+ width: 750px;
+ word-wrap: none;
+}
+.appliedFiltersList span{
+    border: 1px solid rgb(1, 196, 196);
+    background-color: white;
+    padding:0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.appliedFiltersList span:hover{
+    box-shadow: 0px 0px 2px teal;
+}
+.searchResultCount{
+    font-size: 14px;
+}
+.noResult{
+    padding: 20px;
+    background: white;
+    width: 850px;
+    margin: 30px auto;
+}
+.noResult > *{
+    margin: 10px;
+}

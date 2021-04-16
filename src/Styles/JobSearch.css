@@ -4,11 +4,25 @@
     height: 1000px;
 
 }
-.searchJob_adv{
+.searchJob_fullBody form{
+    max-width:1000px;
     width: 80%;
-    padding-top: 80px;
+}
+
+.multipleInputs{
+display: flex;
+justify-content: center;
+padding: 0 18px 0 43px;
+}
+.searchBoxAdvance{
+    justify-content: center;
+}
+.searchJob_adv{
+    max-width:1000px;
+    padding-top: 50px;
     text-align: left;
-    margin-left: 100px;
+    margin: auto;
+    width: 90%;
 }
 .searchJob_adv>h2{
   margin-top: 20px;
@@ -46,7 +60,12 @@
     float: right;
     text-align: left;
     width: 95%;
-    
+    font-size: 14px;
+    padding:0 10px;
+}
+.tipData{
+    color: teal;
+    font-size: 12px;
 }
 .input>input{
     background: none;
@@ -84,7 +103,7 @@
     border: 1px solid rgb(205,205,204);
     margin-top: 20px;
     width: 43%;
-   
+   flex-grow: 1;
     margin-right: 5px;
    padding-left: 10px;
     
@@ -97,11 +116,12 @@
     height: 40px;
     margin-top: 12px;
     background: rgb(108,85,219);
-    margin-right: 4px;
+    margin-left: 15px;
     margin-bottom: 30px;
     color: white;
     font-weight: 500;
     outline: none;
+    border: none;
 }
 .search_button:hover{
     background: rgb(44, 19, 165);
