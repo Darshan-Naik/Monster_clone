@@ -70,7 +70,9 @@ function Results() {
             })
             setFilteredJobs(newJobs)
         },[jobs,filters])
-            if(!filteredJobs.length){
+
+
+            if(!filteredJobs.length && !isLoading){
                 return <NoResultFound />
             }
             return (

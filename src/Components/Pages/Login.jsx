@@ -21,13 +21,12 @@ export const Login = () => {
       email,
       password
     };
-    dispatch(login(payload)).then(history.push("/"))
+    dispatch(login(payload)).then(()=>history.push("/"))
   }
       
-  // if (isAuth) {
-  //   <Redirect to="/" />
-  //   alert("Login Successfull")
-  // }
+    if(isAuth) {
+  <Redirect to="/" />
+ }
   return (
     <div className={styles.loginflex}>
       <div className={styles.car}>

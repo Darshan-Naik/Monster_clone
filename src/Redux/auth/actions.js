@@ -88,4 +88,4 @@ const updateUser =({displayName})=>(dispatch)=>{
       });
 }
 
-export {register,login,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess}
+export {register,login,logoutSuccess,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess}
