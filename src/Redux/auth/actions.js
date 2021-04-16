@@ -51,7 +51,7 @@ const registerSuccess=(payload)=>{
 
 const login=({email,password})=>(dispatch)=>{
     dispatch(loginRequest())
-    return auth.signInWithEmailAndPassword(email, password)
+return auth.signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
@@ -63,6 +63,17 @@ const login=({email,password})=>(dispatch)=>{
 }
 
 // Register network request -----> 
+// Update profile network request -----> 
+
+const updateUser =({displayName})=>(dispatch)=>{
+    auth.currentUser.updateProfile({
+    displayName
+  }).then((res)=> {
+    dispatch(registerSuccess(auth.currentUser))
+  }).catch(()=> {
+    dispatch(registerFailure())
+  });
+}
 
 const register=({email,password,...info})=>(dispatch)=>{
     console.log(email,password)
@@ -70,22 +81,13 @@ const register=({email,password,...info})=>(dispatch)=>{
 
     return auth.createUserWithEmailAndPassword(email,password)
     .then(()=>{
+        dispatch(registerSuccess(auth.currentUser))
         updateUser(info)
     })
     .catch(()=>{
         dispatch(registerFailure())
     })
 }
-// Update profile network request -----> 
 
-const updateUser =({displayName})=>(dispatch)=>{
-        auth.currentUser.updateProfile({
-        displayName
-      }).then((res)=> {
-        dispatch(registerSuccess(auth.currentUser))
-      }).catch(()=> {
-        dispatch(registerFailure())
-      });
-}
 
 export {register,login,logoutSuccess,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess}
