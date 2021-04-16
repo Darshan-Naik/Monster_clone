@@ -7,6 +7,7 @@ function Home() {
         <div className="HomePageBody">
             <MainSearchBox />
             <JobCarousel />
+            
         </div>
     )
 }

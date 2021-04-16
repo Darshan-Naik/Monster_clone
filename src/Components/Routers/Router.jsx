@@ -5,6 +5,7 @@ import NavBar from '../NavBar/NavBar'
 import ErrorPage from '../Pages/ErrorPage'
 import Home from '../Pages/Home'
 import { Jobsearch } from '../Pages/JobSearchPage'
+import Results from '../Pages/Results'
 
 function Router() {
     return (
@@ -17,8 +18,12 @@ function Router() {
                 <Route path="/job-search" exact>
                     <Jobsearch />
                 </Route>
-
-
+                <Route path="/result" exact>
+                    <Results />
+                </Route>
+                <Route path="/result/:id" exact>
+                    <Results />
+                </Route>
 
                 <Route>
                     <ErrorPage />

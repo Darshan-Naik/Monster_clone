@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getJobs } from '../../Redux/job/actions'
-import JobCard from './JobCard'
 import "../../Styles/JobCarousel.css"
 import Carousel from './Carousel'
 function JobCarousel() {
