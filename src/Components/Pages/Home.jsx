@@ -3,14 +3,16 @@ import { CareerTip } from './CareerTip'
 import { ExperTalks } from './ExpertTalks'
 import JobCarousel from './JobCarousel'
 import MainSearchBox from './MainSearchBox'
+import { MonsterReport } from './MonsterReport'
 
 function Home() {
     return (
         <div className="HomePageBody">
             <MainSearchBox />
             <JobCarousel />
-           
-            {/* <CareerTip/> */}
+           <MonsterReport/>
+           <ExperTalks/>
+            <CareerTip/>
         </div>
     )
 }
