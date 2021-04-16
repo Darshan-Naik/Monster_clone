@@ -2,10 +2,12 @@ import React from "react";
 import styles from "../../Styles/Signup.module.css";
 import {useDispatch} from "react-redux"
 import {register}from "../../Redux/auth/actions";
+import { useHistory } from "react-router";
 export const SignUp = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
+  const history = useHistory()
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -14,6 +16,7 @@ export const SignUp = () => {
       password
     };
     dispatch(register(payload))
+      .then(history.push("/login"))
   };
   return (
     <div className={styles.mainDiv}>
@@ -23,11 +26,11 @@ export const SignUp = () => {
         <div className={styles.socialLinks}>
           <button>
             <img className={styles.socIcons} src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/google-512.png" />
-            <span>Google</span>
+            <span className={styles.goo}>Signup with Google</span>
           </button>
           <button>
             <img className={styles.socIcons} src="https://img.icons8.com/plasticine/2x/facebook-new.png" />
-            <span>Facebook</span>
+            <span className={styles.goo}>Signup with Facebook</span>
           </button>
         </div>
       </div>
@@ -37,7 +40,10 @@ export const SignUp = () => {
           Upload Resume<span>(*.doc,.pdf,*.docs,*.rtf)</span>
         </label>
         <br />
-        <input className={styles.choose} required type="file" />
+        <div className={styles.res}>
+          <input className={styles.resume} required type="file" />
+        </div>
+        <br/>
         <form onSubmit={handleSubmit}>
           <label className={styles.label}>Full Name</label>
           <br />
@@ -106,7 +112,7 @@ export const SignUp = () => {
             <option>IT</option>
           </select>
           <br />
-          <p>
+          <p className={styles.para}>
             By registering, you agree to our Terms and Conditions, Privacy Policy and default mailer and communications settings
             governing the use of monsterindia.com.
           </p>
