@@ -1,13 +1,47 @@
 .careerTip{
-width: 400px;
-
+width: 70%;
+height:fit-content;
+background: white;
+margin: auto;
+font-family: unset;
+display: flex;
+flex-wrap: wrap;
+padding-bottom: 10px;
 }
 .careerDataDiv{
+width:40%;
+height: fit-content;
+margin: 10px;
+display: flex;
+flex-direction: row;
 
 }
 .careerIdDiv{
+    width: 15%;
+    text-align: center;
+    color: grey;
 
 }
 .careerTitleDiv{
+    width: 84%;
+    text-align: left;
+    height: 30px;
 
+
+}
+.careerTitleDiv>p{
+margin-top: -15px;
+font-size: 10px;
+color: grey;
+
+}
+.careerTip>p{
+
+   color: blue;
+
+   margin-left: 800px
+}
+.careerTip>h3{
+   margin-right: 600px;
+    margin-left: 30px;
 }
