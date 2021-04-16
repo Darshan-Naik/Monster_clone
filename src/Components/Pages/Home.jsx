@@ -1,4 +1,6 @@
 import React from 'react'
+import { CareerTip } from './CareerTip'
+import { ExperTalks } from './ExpertTalks'
 import JobCarousel from './JobCarousel'
 import MainSearchBox from './MainSearchBox'
 
@@ -8,6 +10,8 @@ function Home() {
             <MainSearchBox />
             <JobCarousel />
             
+           
+            {/* <CareerTip/> */}
         </div>
     )
 }

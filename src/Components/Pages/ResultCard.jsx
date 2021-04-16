@@ -23,12 +23,12 @@ function ResultCard({job_title,company_url,job_type,company_name,location,experi
                         {min_salary} - {max_salary} INR Per Annum
                     </p>
                     
-                    </div>
+                </div>
                     <p>{description[0]}</p>
                     <p> <strong>Skills</strong> : {skills.map(item=><span key={item +Math.random()}>{item}, </span>)}</p>
             </div>
             <div className="flexBox applyNow">
-                     <Link to={"result/job/"+id}>Apply Now</Link>
+                     <Link to={"/result/job/"+id}>Apply Now</Link>
             </div>
         </div>
     )
