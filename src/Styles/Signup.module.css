@@ -17,7 +17,8 @@ div>h1,div>p{
 }
 .socialLinks > button {
   width: 200px;
-  border-radius: 30px;
+  border-radius: 10px;
+  height: 45px;
 }
 .socialLinks > button:first-child:hover {
   background-color: rgb(182, 43, 43);
@@ -26,7 +27,9 @@ div>h1,div>p{
   background-color: rgb(126, 126, 245);
 }
 .socIcons {
-  width: 30px;
+  width: 15px;
+  margin: 0px 5px;
+
 }
 .inp{
     width:92%;
@@ -37,7 +40,7 @@ div>h1,div>p{
 
 }
 .selec{
-    width:83%;
+    width:80%;
     margin:5px;
     margin-left: 3px;;
     height: 29px;
@@ -46,7 +49,6 @@ div>h1,div>p{
     width: 95%;
     height:35px;
     margin: 20px;
-
 }
 .pincode{
     width: 7%;
@@ -57,23 +59,43 @@ div>h1,div>p{
 .btn{
     margin-left:60%;
     background-color: rgb(119, 190, 12);
-    width: 300px;
+    width: 200px;
     height:40px;
     border:none;
     font-size:20px;
     color: white;
     font-weight: 500;
+    cursor: pointer;
 }
-.choose{
-    width:70%;
+.resume{
+    width:80%;
+    background-color: rgb(245, 239, 239);
     margin:20px;
     height: 30px;
+    font-size: 20px;
+    padding: 3px;
+    border: 2px solid white ;
+    margin-top: 5px;
 }
 .label{
-    width:92%;
+    width:90%;
     margin:5px;
     margin-top: 15px;
     height: 30px;
     margin: 20px;
     padding:5px; 
+}
+.goo{
+  /* border :2px solid greenyellow; */
+  margin-top:0px ;
+  font-size: 14px;
+}
+.res{
+  height: 50px;
+  width :450px;
+}
+.para{
+  color: rgb(119, 118, 118);
+  font-size: small;
+  
 }
