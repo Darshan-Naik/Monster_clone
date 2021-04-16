@@ -1,0 +1,90 @@
+.loginflex {
+  display: grid;
+  width: 69%;
+  height: 600px;
+  grid-template: "cr lf";
+  margin: auto;
+  margin-top: 20px;
+}
+.car {
+  grid-area: cr;
+  width: 70%;
+  height: 500px;
+  margin-top: 100px;
+}
+.logFm {
+  grid-area: lf;
+  max-height: 600px;
+  width: 100%;
+  box-shadow: 2px 2px 10px 1px #000000;
+  text-align: left;
+  padding: 20px;
+}
+.gridIm {
+  width: 250px;
+  height: 250px;
+}
+.head2 {
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 600px;
+  color: blue;
+}
+.logFm {
+  grid-area: lf;
+  max-height: 600px;
+  width: 100%;
+  box-shadow: 2px 2px 10px 1px #000000;
+  text-align: left;
+  padding: 20px;
+}
+.logfm > span {
+  font-size: 14px;
+}
+.inp {
+  width: 90%;
+  height: 30px;
+  color: black;
+  background-color: #f8f7f7;
+  margin: 15px 0px;
+  border: 1px solid #474646;
+  padding: 10px;
+}
+.btn {
+  width: 98%;
+  color: whitesmoke;
+  height: 40px;
+  background-color: #3f1bc0;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 2%;
+}
+.btn:hover {
+  background-color: #03032e;
+}
+.extra {
+  text-align: center;
+}
+.extra > span {
+  font-size: 14px;
+}
+.imIcon {
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+}
+.btn2{
+    width: 100%;
+    color: #0826bb;
+    height: 40px;
+    background-color: #fbf9fc;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: auto;
+    margin: 20px 0px;
+}
+.btn2:hover{
+    background-color: #0909ce;
+    color: white;
+}
