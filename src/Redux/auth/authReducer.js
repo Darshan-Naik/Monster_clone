@@ -31,6 +31,7 @@ const authReducer =(state=init,{type,payload})=>{
             const updateState = {
                 ...state,
                 isLoading :false,
+                isError :false,
                 isAuth : true,
                 userData : payload
             }

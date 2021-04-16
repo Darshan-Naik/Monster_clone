@@ -21,7 +21,7 @@ const handleLogout=()=>{
             </div>
             <div>
                 <Link to="/job-search">JOB SEARCH</Link>
-               <Link to="/work-from-home">WORK FROM HOME</Link>
+               <Link to="/result/work from home">WORK FROM HOME</Link>
                <Link to="/career-tips">CAREER TIPS</Link>
                <Link to="/resume-services">RESUME SERVICES</Link>
                <Link>MORE</Link>

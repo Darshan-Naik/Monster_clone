@@ -24,10 +24,14 @@
 
 .flex {
     display: flex;
-    /* border: 2px solid red; */
     padding: 0.5% 7%;
     box-sizing: border-box;
     font-size: 12px;
+    justify-content: flex-start;
+    text-align: left;
+}
+.flex>a{
+    width: 130px;
 }
 
 .flex > a {
@@ -39,6 +43,7 @@
     display: flex;
     /* border: 2px solid red; */
     justify-content: space-around;
+    align-items: center;
     box-sizing: border-box;
     font-size: 14px;
     background-color: rgb(245,245,245);
@@ -65,7 +70,7 @@
 .flex3 {
     display: flex;
     /* border: 2px solid red; */
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: left;
     text-decoration: none;
     background-color: rgb(93,77,168);
@@ -106,6 +111,7 @@
 
 .relative {
     position: relative;
+    align-items: center;
 }
 
 .icon2 {
@@ -117,4 +123,13 @@
     background-color: #5d4da8;
     padding: 3% 5%;
     border-radius: 50%;
+}
+.relative img{
+    width: 30px;
+    margin: 10px;
+}
+.selectFooter{
+    height: 30px;
+    width: 150px;
+    border: 1px solid rgba(0, 128, 128, 0.37);
 }

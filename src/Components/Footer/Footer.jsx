@@ -12,7 +12,7 @@ function Footer() {
 
         <div className="footer-part-1">
             <div className="flex">
-                <Link>Jobs by Locations : </Link>
+                <Link >Jobs by Locations : </Link>
                 <div className="subflex">
                     <Link>Jobs in Bangalore </Link>
                     <Link>| Jobs in Delhi </Link>
@@ -111,7 +111,7 @@ function Footer() {
 
         <div className="flex2">
             <div>
-                <select>
+                <select className="selectFooter">
                     <option value="India">India</option>
                 </select>
             </div>
@@ -129,8 +129,11 @@ function Footer() {
                 <div>info@monsterindia.com</div>
             </div>
 
-            <div className="relative">
-                <div>Social Media Icons</div>
+            <div className="relative flexBox">
+            <img width="30px" src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
+            <img width="30px" src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
+            <img width="40px" src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" />
+            
             </div>
         </div>
 
