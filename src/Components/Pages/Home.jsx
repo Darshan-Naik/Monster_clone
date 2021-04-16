@@ -9,6 +9,7 @@ function Home() {
         <div className="HomePageBody">
             <MainSearchBox />
             <JobCarousel />
+            
            
             {/* <CareerTip/> */}
         </div>

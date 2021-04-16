@@ -27,11 +27,11 @@ const handleVoice=()=>{
             
                     <div className="SearchBar">
                         <div className="SearchBarButtons">
-                            <button>All Jobs</button>
-                            <button>Work From Home</button>
-                            <button className="alertButton">Covid-19 Resources</button>
-                            <button>Contract Jobs</button>
-                            <button>Fresher Jobs</button>
+                            <Link to="/result/jobs">All Jobs</Link>
+                            <Link to="/result/work from home">Work From Home</Link>
+                            <Link to="/result/Covid" className="alertButton">Covid-19 Resources</Link>
+                            <Link to="/result/Contract">Contract Jobs</Link>
+                            <Link to="/result/Fresher">Fresher Jobs</Link>
                         </div>
                         <div className="SearchBarInputs">
                             <img width="20px" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="search"/>
@@ -40,17 +40,17 @@ const handleVoice=()=>{
                             <button onClick={handleSearch}>Search</button>
                         </div>
                         <div className="advanceSearchButton">              
-                            <Link>Advance Search</Link>
+                            <Link to="/job-search">Advance Search</Link>
                         </div>
                         <div  className="TrendingSearch">
                             <strong>Trending Searches : </strong>
-                            <small>Jobs in Delhi,</small> <small> Jobs in Mumbai,</small> <small> Jobs in Hyderabad,</small> <small> Jobs in Bangalore,</small> <small> Jobs in Chennai</small>
+                            <Link to="/result/Jobs in Delhi">Jobs in Delhi,</Link> <Link to="/result/Jobs in Mumbai"> Jobs in Mumbai,</Link> <Link to="/result/Jobs in Hyderabad"> Jobs in Hyderabad,</Link> <Link to="/result/Jobs in Bangalore"> Jobs in Bangalore,</Link> <Link to="/result/Jobs in Chennai"> Jobs in Chennai</Link>
                         </div>
                     </div>
                     <div className="flexBox registerBox">
                         <div>
                             <h4>NEW TO MONSTER?</h4>
-                            <Link>REGISTER WITH US</Link>
+                            <Link to="/seeker/registration">REGISTER WITH US</Link>
                             <p>or</p>
                             <div className="resumeBox">
                                 <h4>UPLOAD RESUME</h4>

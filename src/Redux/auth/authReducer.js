@@ -8,7 +8,7 @@ const init =  loadData("userData") ||  {
     isAuth : false,
     isLoading : false,
     isError : false,
-    userData : null
+    userData : {}
 }
 
 const authReducer =(state=init,{type,payload})=>{
@@ -34,7 +34,7 @@ const authReducer =(state=init,{type,payload})=>{
                 isAuth : true,
                 userData : payload
             }
-            saveData("userData",updateState)
+           saveData("userData",updateState)
             return updateState
         }
 
@@ -61,7 +61,7 @@ const authReducer =(state=init,{type,payload})=>{
             const updateState = {
                 ...state,
                 isAuth : false,
-                userData : null
+                userData : {}
             }
             saveData("userData",updateState)
             return updateState
