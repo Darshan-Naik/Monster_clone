@@ -28,13 +28,13 @@
   margin: 0px;
   font-size: 28px;
   font-weight: 600px;
-  color: blue;
+  color: #6c54da;
 }
 .logFm {
   grid-area: lf;
   max-height: 600px;
   width: 100%;
-  box-shadow: 2px 2px 10px 1px #000000;
+  box-shadow: 2px 2px 10px rgb(230, 225, 225);
   text-align: left;
   padding: 20px;
 }
@@ -47,15 +47,15 @@
   color: black;
   background-color: #f8f7f7;
   margin: 15px 0px;
-  border: 1px solid #474646;
+  /* border: 1px solid #474646; */
   padding: 10px;
 }
 .btn {
   width: 98%;
   color: whitesmoke;
   height: 40px;
-  background-color: #3f1bc0;
-  border-radius: 10px;
+  background-color:#6c54da;
+  border-radius: 2px;
   font-size: 20px;
   margin: auto;
   margin-top: 2%;
@@ -70,21 +70,29 @@
   font-size: 14px;
 }
 .imIcon {
-  width: 50px;
+  width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin-left: 20px;
 }
 .btn2{
     width: 100%;
-    color: #0826bb;
+    color:#6c54da;
     height: 40px;
     background-color: #fbf9fc;
-    border-radius: 10px;
+    border-radius: 2px; 
     font-size: 20px;
     margin: auto;
     margin: 20px 0px;
+    border: 2px solid #6c54da;
 }
 .btn2:hover{
     background-color: #0909ce;
     color: white;
+}
+.spaan{
+  color: grey;
+}
+.socials{
+  margin-top:0px;;
 }
