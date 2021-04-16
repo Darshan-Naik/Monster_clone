@@ -12,7 +12,8 @@ const init={
     company_url: "",
     location:[],
     description:[],
-    about:""
+    about:"",
+    contact_hr:""
 }
 function JobCardDetails() {
    const [data,setData]=React.useState(init)
@@ -23,6 +24,7 @@ function JobCardDetails() {
  .catch((err)=>(err))   
 }
 
+console.log(data)
  useEffect(() => {
    
     config()
@@ -38,7 +40,7 @@ function JobCardDetails() {
              <button>APPLY</button>
              </div>
           <div id="JobCard_1_2">
-              <p>Company Name Confidential</p>
+              <p>{data.company_name}</p>
               <div id="JobCard_1_2_1" >
               <div>
                   <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-512.png" alt=""/>
@@ -55,10 +57,28 @@ function JobCardDetails() {
               </div>
           </div>
          </div>
-         <div id="JobCard_2">
-             <p>Job Description</p>
-             <div id="JobCard_2_1"></div>
+         <div id="JobCard_2"> 
+            <div>
+             <h3>Job Description</h3>
+             </div>  
+             <div id="JobCard_2_1">
+                 <ul>
+                {data.description.map((item)=><li>{item}</li>)}
+                        
+                 </ul>
+             </div>
+         </div>
+         <div id="JobCard_3">
+             <p>About Company</p>
+             <div>{data.about}</div>
+          <div id="JobCard_3_1">
+              <div>Role: {data.Role}</div>
+             { data.skills && <div>Skills: {data.skills.map((item)=><span>{item}</span>)}</div>}
+              <div>Company Url: {data.company_url}</div>
+              <div>Contact Hr:{data.contact_hr}</div>
 
+            
+          </div>
          </div>
        </div>
 

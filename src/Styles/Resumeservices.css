@@ -1,0 +1,88 @@
+
+.monster{
+  
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: auto;
+}
+.header{
+    padding-right: 70%;
+    padding-left: 33px;
+}
+
+.resume__card{
+  
+    margin-left: 35px;
+    display: flex;
+    background-color: rgb(240, 239, 239);
+    width: 270px;
+    flex-direction: row;
+    
+}
+.resume__description{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    margin-top: -17px;
+    padding-left: 25px;
+}
+
+.resume__description>p{
+    margin: 5px 0;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 20px;
+    max-height: 100px;
+}
+
+.resume__description>h3{
+    margin-top: -4px;
+    color: rgb(23, 74, 184);
+    font-size: 16px;
+    font-weight: 390;
+    align-self: flex-end;
+}
+
+.mobile__number{
+    display: flex;
+    margin-top: 28px;
+    width: 100%;
+    height: 94px;
+   background-color: rgb(100, 91, 187);
+   color: white;
+   padding-left: 20px;
+}
+
+
+.mobile__number>input{
+    width: 19rem;
+    height: 47px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-left: 20px;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+}
+.mobile__number>button{
+    width: 13rem;
+    height: 49px; 
+    margin-top: 25px ;
+    background-color:rgb(244,166,34);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.mobile__number>button:hover{
+
+    background-color:rgb(219, 106, 41);
+}
+
+.mobile__number>input:focus{
+    outline: none;
+    
+}

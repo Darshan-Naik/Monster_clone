@@ -22,8 +22,10 @@
    margin-top: 20px;
    padding-left: 18px ;
    padding-right: 18px;
-   color: rgb(108,84,218);
+   color:white;
+   font-weight: 500;
    text-align: center;
+   background-color:  rgb(108,84,218) ;
 
 }
 #JobCard_1_2{
@@ -38,6 +40,7 @@
   display: flex;
   flex-direction: row;
   justify-content: start;
+  color: gray;
 
 } 
 
@@ -56,5 +59,9 @@
    margin-right: 20px;
   }
   #JobCard_2_1{
-      
+ text-align: left;
   }
+  #JobCard_2>div>h3{
+text-align: left;
+margin-left: 20px;
+}
