@@ -5,6 +5,7 @@ align-items: flex-start;
 justify-content: center;
 padding: 10px 20px;
 background-color: white;
+margin: 10px;
 }
 .JobSearchBySkills>a{
     color: teal;

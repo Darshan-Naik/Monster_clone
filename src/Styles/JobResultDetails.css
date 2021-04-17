@@ -137,3 +137,8 @@
    margin: auto;
    text-align: left;
  }
+ .loadingBox{
+   display: grid;
+   place-items: center;
+   height: 90vh;
+ }

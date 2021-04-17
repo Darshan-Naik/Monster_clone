@@ -4,7 +4,8 @@ import  axios  from 'axios';
 import { useHistory, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import ResultCard from './ResultCard';
-import Loading from './Loading';
+import Loading from './Loading';  
+import RegisterAdd from './RegisterAdd';
 const init={
     id:"",
     job_title:"",
@@ -47,7 +48,7 @@ const history = useHistory()
    }
  }
   
-    return isLoading?<Loading /> : (
+    return isLoading?<div className="loadingBox"><Loading /></div> : (
    <div>
       <div id="jobCardDetailsBody">
          <div id="JobCard_1"> 
@@ -84,6 +85,9 @@ const history = useHistory()
                  </ul>
              </div>
          </div>
+       <RegisterAdd />
+
+
          <div id="JobCard_3_1">
               <p>Job Details</p>
               <div><strong>Role : </strong>{data.Role}</div>

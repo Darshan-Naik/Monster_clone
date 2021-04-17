@@ -1,4 +1,6 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import FilterCard from './FilterCard'
 
 function ResultFilters({jobs,filters,handleFilter}) {
@@ -7,6 +9,7 @@ const [role,setRole] = React.useState([])
 const [experience,setExperience] = React.useState([])
 const [city,setCity] = React.useState([])
 const [skills,setSkills] = React.useState([])
+const isAuth = useSelector(store=>store.auth.isAuth)
 
 React.useEffect(()=>{
     let data =[]
@@ -58,6 +61,15 @@ React.useEffect(()=>{
             <FilterCard title="Role" data={role} filters={filters} handleFilter={handleFilter}/>
             <FilterCard title="Experience" data={experience} filters={filters} handleFilter={handleFilter}/>
             <FilterCard title="Skills" data={skills} filters={filters} handleFilter={handleFilter}/>
+            {!isAuth &&  (  <div className="AddBox">
+                            <h4>NEW TO MONSTER?</h4>
+                            <Link to="/seeker/registration">REGISTER WITH US</Link>
+                            <p>or</p>
+                            <div className="resumeBox">
+                                <h4>UPLOAD RESUME</h4>
+                                <p>We will create your profile</p>
+                            </div>
+                        </div>) }
         </div>
     )
 }
