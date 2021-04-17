@@ -24,7 +24,7 @@
 .MainImageBox{
     text-align: left;
     margin:10px auto;
-    width: 1000px;
+    width: 1100px;
     border: 1px solid rgba(151, 151, 151, 0.322);
     padding: 0 15px 25px 15px;
     position: relative;
@@ -51,7 +51,7 @@
     margin-top: -20px;
 }
 .NxtBtn >button,.PrvBtn>button{
-    box-shadow: 0px 0px 10px rgb(7, 197, 197);
+    box-shadow: 0px 0px 2px rgb(7, 197, 197);
     padding: 5px 12px;
     border-radius: 50%;
     border: none;
@@ -62,5 +62,5 @@
     
 }
 .NxtBtn >button:hover,.PrvBtn>button:hover{
-    box-shadow: -1px -1px 15px rgb(8, 196, 196);
+    box-shadow: -1px -1px 5px rgb(8, 196, 196);
 }

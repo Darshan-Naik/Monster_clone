@@ -1,37 +1,28 @@
 #jobCardDetailsBody{
-   width: 65%;
+   max-width: 1000px;
    margin: auto;
-   padding: 20px;
-   height: fit-content;
-   margin-bottom: 20px;
-   /* background: white; */
-  
+   padding: 20px;  
 }
 #JobCard_1_1{
-    width: 100%;
-    height: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding:20px;
 }
 #JobCard_1_1>h4{
-   margin: 10px 0px;
-    background-color: white;
-    padding: 20px;
-    width: 100%;
+   margin:0;
+
 }
 #JobCard_1_1>button{
-   margin-right: 20px;
-   width: 100px;
-   height: 35px;
-   margin-top: 20px;
-   text-align: center;
-   border: 2px solid blue;
- color: blue;
- text-decoration: none;
- font-weight: 500;
-padding:5px 10px;
-transition: all 300ms ease-in-out;
+
+    border: 2px solid blue;
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+    padding:5px 10px;
+    transition: all 300ms ease-in-out;
+    background-color: transparent;
 
 }
 #JobCard_1_1>button:hover{
@@ -42,53 +33,59 @@ transition: all 300ms ease-in-out;
 
 #JobCard_1_2{
   text-align: left;
-    margin-left: 20px;
-    color:rgb(108,84,218);
-    margin-top: 5px;
-
-
+  color:rgb(108,84,218);
+  padding:0 20px;
+  background-color: white;
 }
 #JobCard_1_2_1{
   display: flex;
-  flex-direction: row;
   justify-content: start;
   color: gray;
-
 } 
-
+#JobCard_1_2>p{
+  margin: 0;
+  padding: 0;
+}
 #JobCard_1_2_1>div>img{
   height: 15px;
   width:15px;
   margin-right: 10px;
-
 }
-#JobCard_1_1{
 
-}
 #JobCard_1_2_1>div{
    height: 25px;
    width: fit-content;
    margin-right: 20px;
   }
+  #JobCard_2{
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
   #JobCard_2_1{
  text-align: left;
  font-size: 14px;
  width: 90%;
   }
-  #JobCard_2>div>p{
-text-align: left;
-margin-left: 20px;
-font-size: 20px;
-font-weight: 500;
 
+  #JobCard_2>div>p{
+  text-align: left;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+#JobCard_3{
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto;
 }
 #JobCard_3_1{
   text-align: left;
-  margin-left: 20px;
-  margin-top: 30px;
   border: 1px solid rgba(0, 128, 128, 0.288);
-  width: fit-content;
-  padding: 15px;
+  padding: 10px;
+  background-color: white;
 }
 #JobCard_3>div{
   text-align: left;
@@ -129,4 +126,14 @@ font-weight: 500;
   font-size: 20px;
   font-weight: 500;
    
+ }
+ .similarJobs>h2{
+   font-weight: 500;
+   border-bottom:1px solid rgba(0, 128, 128, 0.322) ;
+
+ }
+ .similarJobs{
+   max-width: 1000px;
+   margin: auto;
+   text-align: left;
  }

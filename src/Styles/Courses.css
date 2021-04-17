@@ -1,10 +1,11 @@
 .courses{
-    width: 76%;
+    width: 65%;
     height: 500px;
     margin: auto;
     background-color: white;
     margin-bottom: 10px;
     margin-top: 15px;
+    font-size: 16px;
 }
 .courses__header{
     margin-left: 20px;
@@ -12,6 +13,8 @@
     display: flex;
     justify-content: space-between;
     text-align: left;
+    font-size: 16px;
+    font-weight: 500;
    
 }
 .courses__description{

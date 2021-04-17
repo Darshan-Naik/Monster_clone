@@ -5,6 +5,9 @@ import axios from "axios"
 import "../../Styles/Results.css"
 import ResultFilters from './ResultFilters'
 import NoResultFound from './NoResultFound'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import Loading from './Loading'
 
 function Results() {
     const param = new URLSearchParams(window.location.search)
@@ -13,6 +16,7 @@ function Results() {
         const [filters,setFilters] = React.useState(getFilters())
         const [filteredJobs,setFilteredJobs] = React.useState([])
         const [isLoading,setIsLoading] = React.useState(true)
+        const isAuth = useSelector(store=>store.auth.isAuth)
 
     function getFilters(){
         let paramValue = []
@@ -89,9 +93,27 @@ function Results() {
                         <p>Applied Filters : {filters.map(item=><span onClick={()=>removeFilter(item)}>{item}   -</span>)}</p>
                 </div>): null}
                     
-                    { isLoading? <h1>Loading...</h1>   : filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
+                    { isLoading? <Loading/>: filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
                     }
                 </div>
+                <div>
+                {!isAuth &&  (  <div className="registerAddBox">
+                            <h4>NEW TO MONSTER?</h4>
+                            <Link to="/seeker/registration">REGISTER WITH US</Link>
+                            <p>or</p>
+                            <div className="resumeBox">
+                                <h4>UPLOAD RESUME</h4>
+                                <p>We will create your profile</p>
+                            </div>
+                        </div>) }
+                    <div className="careerAddBox" >
+                        <img src="https://www.monsterindia.com/srp/images/career-booster-icon.png" alt="add"/>
+                        <h2>CAREER BOOSTER</h2>
+                        <p>GIVE YOUR CAREER A BOOST WITH MONSTER'S RESUME SERVICES.</p>
+                        <Link>Know more</Link>
+                    </div>
+                </div>
+                
                 </div>
             )
         }

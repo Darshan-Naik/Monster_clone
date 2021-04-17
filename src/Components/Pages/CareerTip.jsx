@@ -14,7 +14,6 @@ getData()
 
     return(
       <div className="careerTip">
-           <p>View all -- </p>
           <h3>Career Advice and Tips</h3>
           {data.map((item)=><div className="careerDataDiv">
                <div className="careerIdDiv"><h3>{item.id}</h3></div>

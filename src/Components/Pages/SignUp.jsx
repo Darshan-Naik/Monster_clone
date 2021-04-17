@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "../../Styles/Signup.module.css";
 import {useDispatch, useSelector} from "react-redux"
-import {register}from "../../Redux/auth/actions";
+import {register, registerFailure, registerRequest, registerSuccess}from "../../Redux/auth/actions";
 import { useHistory } from "react-router";
+import firebase from "firebase/app"
+import { auth } from "../../Utils/fireBase";
+
 export const SignUp = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -22,17 +25,51 @@ export const SignUp = () => {
         history.push("/login")
       });
     }
+
+    const handleGoogleSingIn =()=>{
+      dispatch(registerRequest())
+      var provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+      .then((result) => {
+         const user = result.user;
+    
+        dispatch(registerSuccess(user))
+        history.push("/login")
+    
+      }).catch((error) => {
+        dispatch(registerFailure(error.message))
+        alert("wrong credentials")
+      });
+    
+    }
+    const handleFacebookSignIN =()=>{
+      dispatch(registerRequest())
+      var provider = new firebase.auth.FacebookAuthProvider();
+      auth.signInWithPopup(provider)
+      .then((result) => {
+         const user = result.user;
+    
+         dispatch(registerSuccess(user))
+        history.push("/")
+    
+      }).catch((error) => {
+        dispatch(registerFailure(error.message))
+        alert("wrong credentials")
+      });
+    
+    }
+
   return (
     <div className={styles.mainDiv}>
       <div className={styles.center}>
         <h2 className={styles.mainHead}>Create an Accounts <small>(it's free)</small> </h2>
         <p className={styles.subHead}>It only takes a couple of minutes to get started</p>
         <div className={styles.socialLinks}>
-          <button>
+          <button onClick={handleGoogleSingIn}>
             <img className={styles.socIcons} src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
             <span className={styles.goo}>Signup with Google</span>
           </button>
-          <button>
+          <button onClick={handleFacebookSignIN}>
             <img className={styles.socIcons} src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
             <span className={styles.goo}>Signup with Facebook</span>
           </button>

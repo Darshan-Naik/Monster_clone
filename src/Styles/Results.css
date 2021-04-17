@@ -4,10 +4,19 @@
     margin:10px auto;
     background-color: white;
 }
-.resultCard>div{
-    padding: 10px;
+.resultCard>a{
     text-align: left;
     cursor: pointer;
+    text-decoration: none!important;
+    color: black;
+
+}
+.resultCard>a>div{
+    padding: 10px!important;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none!important;
+
 }
 .resultCard:hover{
 box-shadow: 0px 0px 10px teal;
@@ -82,4 +91,35 @@ transition: all 300ms ease-in-out;
 }
 .noResult > *{
     margin: 10px;
+}
+.registerAddBox{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    height: fit-content;
+    margin-top: 40px;
+}
+.registerAddBox *,.careerAddBox *{
+    margin: 0;
+    font-size: 14px;
+    
+}
+.careerAddBox{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(214, 211, 211);
+    height: fit-content;
+    margin-top: 40px;
+    text-align: left;
+}
+.careerAddBox a{
+    background-color: rgb(68, 68, 248);
+    color: white;
+    padding:5px 10px;
+    margin: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
 }

@@ -9,6 +9,10 @@ function NavBar() {
 
 const isAuth = useSelector(store=>store.auth.isAuth)
 const userEmail = useSelector(store=>store.auth.userData.email)
+const userName = useSelector(store=>store.auth.userData.displayName)
+const profilePic = useSelector(store=>store.auth.userData.photoURL)
+console.log(profilePic)
+const [state,setState] = React.useState(true)
 const dispatch = useDispatch()
 const handleLogout=()=>{
     dispatch(logoutSuccess())
@@ -28,15 +32,17 @@ const handleLogout=()=>{
             </div>
             <div className="navBarCards">
                 <div className="covidCard">
-                    <strong>job affected by COVID-19</strong>
+                    <strong>Job affected by COVID-19</strong>
                 </div>
              {isAuth? 
-                <div className="userProfile">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png" alt="Profile"/>
+                <div className="userProfile" onMouseEnter={()=>setState(false)} onMouseLeave={()=>setState(true)}>
+                    <img src={profilePic || "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png"} alt="Profile"/>
                     <div>
-                        <p>{userEmail}</p>
+                      {state? <> <p>{userName || "User"}</p>
+                        <p>{userEmail}</p> </> :
                         <button onClick={handleLogout}>Log Out</button>
-                        </div>
+             }
+                    </div>
 
                 </div>
 

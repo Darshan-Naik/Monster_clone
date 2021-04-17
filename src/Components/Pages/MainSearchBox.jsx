@@ -2,11 +2,15 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import "../../Styles/MainSearchBox.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import { useSelector } from 'react-redux'
+import Loading from './Loading'
 
 function MainSearchBox() {
 const [query,setQuery] = React.useState("")
+const [state,setState] = React.useState(true)
 const history = useHistory()
 const { transcript, resetTranscript } = useSpeechRecognition()
+const isAuth = useSelector(store=>store.auth.isAuth)
 const handleSearch = ()=>{
         if(query){
             history.push("/result/"+query)
@@ -16,6 +20,10 @@ React.useEffect(()=>{
     setQuery(transcript)
 },[transcript])
 const handleVoice=()=>{
+    setState(false)
+    setTimeout(()=>{
+        setState(true)
+    },5000)
     resetTranscript()
     SpeechRecognition.startListening()    
 }
@@ -27,7 +35,7 @@ const handleVoice=()=>{
             
                     <div className="SearchBar">
                         <div className="SearchBarButtons">
-                            <Link to="/result/jobs">All Jobs</Link>
+                            <Link to="/result/job">All Jobs</Link>
                             <Link to="/result/work from home">Work From Home</Link>
                             <Link to="/result/Covid" className="alertButton">Covid-19 Resources</Link>
                             <Link to="/result/Contract">Contract Jobs</Link>
@@ -36,10 +44,15 @@ const handleVoice=()=>{
                         <div className="SearchBarInputs">
                             <img width="20px" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="search"/>
                             <input type="text" placeholder= "Search by skills company & job title" value={query} onChange={(e)=>setQuery(e.target.value)} /> 
-                            <img width="20px" src="https://static.thenounproject.com/png/755355-200.png" alt="search" onClick={handleVoice}/>                  
+                         {state? <img width="25px" src="https://static.thenounproject.com/png/755355-200.png" alt="search" onClick={handleVoice}/> 
+                           : <div className="voiceLoading">
+                                    <Loading width={30} height={25}/>
+                            </div>}
+                                                   
                             <button onClick={handleSearch}>Search</button>
                         </div>
-                        <div className="advanceSearchButton">              
+                        <div className="advanceSearchButton">
+    
                             <Link to="/job-search">Advance Search</Link>
                         </div>
                         <div  className="TrendingSearch">
@@ -48,7 +61,7 @@ const handleVoice=()=>{
                         </div>
                     </div>
                     <div className="flexBox registerBox">
-                        <div>
+                    {!isAuth &&  (  <div>
                             <h4>NEW TO MONSTER?</h4>
                             <Link to="/seeker/registration">REGISTER WITH US</Link>
                             <p>or</p>
@@ -56,7 +69,7 @@ const handleVoice=()=>{
                                 <h4>UPLOAD RESUME</h4>
                                 <p>We will create your profile</p>
                             </div>
-                        </div>
+                        </div>) }
                         <div>
                             <h4>FREE JOB ALERT</h4>
                             <h5>Get an email on jobs matching your criteria</h5>

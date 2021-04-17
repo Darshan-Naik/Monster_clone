@@ -17,7 +17,7 @@ const scrollBar = React.useRef()
         
         timer.current= setInterval(() => {
             scrollBar.current.scrollLeft += 130;
-            if(scrollBar.current.scrollLeft>600)
+            if(scrollBar.current.scrollLeft>550)
             {
                 scrollBar.current.scrollLeft=0
             }
