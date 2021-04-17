@@ -18,7 +18,6 @@ function Home() {
             <Courses/>
            <MonsterReport/>
            <ExperTalks/>
-           
             <CareerTip/>
             
         </div>

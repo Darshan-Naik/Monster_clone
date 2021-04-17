@@ -1,0 +1,80 @@
+.MainTip_1{
+    width: 100%;
+   height: fit-content;
+   margin-top: -38px;
+}
+.MainTip_1>p{
+    width: 100%;
+    background-color:rgb(109,84,218) ;
+    height: 80px;
+    color: white;
+    font-size: 40px;
+    padding-top: 20px;
+}
+.mainTip_1_1{
+    margin: auto;
+    width: 90%;
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainTip_1_1_1{
+    width: 75%;
+display: flex;
+flex-wrap: wrap;
+
+
+}
+.mainTip_1_1_2{
+     width: 26%;
+     font-size: 12px;
+    
+     text-align: left;
+     background-color: white;
+}
+.mainTip_1_1_2>ul{
+    width: 87%;
+
+}
+.mainTip_1_1_2_1>p{
+    width: 87%;
+    font-size: 16px;
+    color:rgb(109,84,218) ;
+    
+
+    
+}
+.mainTip_1_1_2_1{
+   display: flex; 
+   margin-left: 20px;
+   height: 30px;
+  
+}
+.mainTip_1_1_2_1>img{
+   height: 30px;
+   width: 30px;
+   margin-top: 10px;
+   margin-right: 20px;
+ }
+.mainTip_1_1_1_1{
+    width: 11%;
+    height: 150px;
+    border: 1px solid rgb(218, 214, 214);
+    font-size: 14px;
+    padding: 10px 22px;
+    font-weight: 500;
+}
+.mainTip_1_1_1_1>div{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 50px;
+    
+    
+}
+.mainTip_1_1_1_1:hover{
+    background-color: white;
+    cursor: pointer;
+
+}

@@ -15,7 +15,36 @@ export const ImageCarousel=["https://media.monsterindia.com/trex/prod-cdn/media/
 "https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2021/march/g3es8MZgIi3qJs6E9Y3LrvRzrLJwgyFbWC0zbHOW.jpeg",
 "https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2021/april/S7ByOesIGjQTu8FVfyGsPsQUfJc5jBXk5uzowf80.jpeg"]
 
+export const TipImage=[{image:"https://media.monsterindia.com/seeker_2014/social/careercenter/taxation.png",
+                        title:"Taxtion and Savings"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_startup.png",
+                        title:"Startups"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_cii.png",
+                        title:"Special Ability"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_women.png",
+                        title:"Career Women"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/job_hunt_strategy.png",
+                        title:"Job Search Strategy"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_sit.png",
+                        title:"Motivation & Leadership"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_contract_article.png",
+                        title:"Second Career option"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/salary_benefits.png",
+                        title:"Salary Negotiation"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_resume_center.png",
+                        title:"Resume & Cover letters"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_life_at_work.png",
+                        title:"Work life balance"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/Icon_interview_center.png",
+                        title:"Interview Tips"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_career_new.png",
+                        title:"Career Management"}]
 
+export const TrendigArticle=["5 Easy Steps to Make a Career Transition from a Software Developer to a Business Analyst",
+                             "8 Tips to Launch a Career in Java Development as a Fresher",
+                            "6 Popular IT Jobs in India",
+                            "7 Skills to Fast-Track Your Career as a Web Developer",
+                            "5 Tips to Stay a Step Ahead and Get a Python Job as a Fresher"]                        
 
 
 export const Tips=[
