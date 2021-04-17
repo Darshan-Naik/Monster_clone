@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router'
 import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
+import { CareerTipMainPage } from '../Pages/CareerTipMainPage'
 import ErrorPage from '../Pages/ErrorPage'
 import Home from '../Pages/Home'
 import JobResultDetails from '../Pages/JobResultDetails'
@@ -35,6 +36,9 @@ function Router() {
                 </Route>
                 <Route path="/result/job/:id">
                     <JobResultDetails/>
+                </Route>
+                <Route path="/career-tips">
+                    <CareerTipMainPage/>
                 </Route>
                 
 
