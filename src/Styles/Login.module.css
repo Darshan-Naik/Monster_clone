@@ -128,3 +128,7 @@
 .social img{
   width: 30px;
 }
+.social button{
+  border: none;
+  background-color: transparent;
+}

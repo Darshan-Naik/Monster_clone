@@ -1,7 +1,10 @@
 import React,{useEffect} from 'react'
-import "./../../Styles/JobCardDetails.css"
+import "./../../Styles/JobResultDetails.css"
 import  axios  from 'axios';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
+import { useSelector } from 'react-redux';
+import ResultCard from './ResultCard';
+import Loading from './Loading';
 const init={
     id:"",
     job_title:"",
@@ -19,12 +22,16 @@ const init={
 function JobResultDetails() {
    const [data,setData]=React.useState(init)
    const {id}=useParams()
-
-
-
-    const config=()=>{
-   axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
-.then((res)=>setData(res.data))
+  const jobs = useSelector(store=>store.job.jobs)
+  const [isLoading,setIsLoading] = React.useState(true)
+  const isAuth = useSelector(store=>store.auth.isAuth)
+const config=()=>{
+  setIsLoading(true)
+axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
+.then((res)=>{
+  setIsLoading(false)
+  setData(res.data)
+})
  .catch((err)=>(err))   
 }
 
@@ -32,16 +39,21 @@ console.log(data)
  useEffect(() => {
    
     config()
- }, [])   
-
+ }, [id])   
+const history = useHistory()
+ const handleApply=()=>{
+   if(!isAuth){
+      history.push("/login")
+   }
+ }
   
-    return (
+    return isLoading?<Loading /> : (
    <div>
       <div id="jobCardDetailsBody">
          <div id="JobCard_1"> 
          <div id="JobCard_1_1">
              <h4>{data.job_title}</h4>
-             <button>APPLY</button>
+             <button onClick={handleApply}>{isAuth?"APPLY" : "LOGIN TO APPLY"}</button>
              </div>
           <div id="JobCard_1_2">
               <p>{data.company_name}</p>
@@ -72,23 +84,24 @@ console.log(data)
                  </ul>
              </div>
          </div>
-         <div id="JobCard_3">
-             <p>About Company</p>
-             <div>{data.about}</div>
-          <div id="JobCard_3_1">
+         <div id="JobCard_3_1">
               <p>Job Details</p>
-              <div><strong>Role :</strong>{data.Role}</div>
+              <div><strong>Role : </strong>{data.Role}</div>
             
               <div><strong>Company Url : </strong>{data.company_url}</div>
               { data.skills && <div className="skill"><strong>Skills:</strong> {data.skills.map((item)=><span><div className="JobCard_3_1_skill">{item}</div></span>)}</div>}
               <div><strong>Contact Hr : </strong>{data.contact_hr}</div>
-              
-
-            
           </div>
+         <div id="JobCard_3">
+             <p>About {data.company_name}</p>
+             <div>{data.about}</div>
          </div>
        </div>
-
+      {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id != id).length? <div className="similarJobs">
+          <h2>Similar Jobs</h2>
+          {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id != id)
+          .map(item=><ResultCard {...item}/>)}
+        </div> : null}
      
     </div>
     )

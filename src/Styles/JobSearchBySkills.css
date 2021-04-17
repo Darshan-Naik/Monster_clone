@@ -1,0 +1,22 @@
+.JobSearchBySkills{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding: 10px 20px;
+background-color: white;
+}
+.JobSearchBySkills>a{
+    color: teal;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.JobSearchBySkills>a:hover{
+    text-decoration: underline;
+}
+.JobSearchBySkills>h2{
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}

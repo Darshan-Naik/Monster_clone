@@ -1,12 +1,12 @@
 .careerTip{
-width: 76%;
+    width: 65%;
 height:fit-content;
 background: white;
 margin: auto;
 font-family: unset;
 display: flex;
 flex-wrap: wrap;
-padding-bottom: 10px;
+padding: 10px;
 }
 .careerDataDiv{
 width:40%;

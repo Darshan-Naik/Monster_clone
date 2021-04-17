@@ -7,6 +7,8 @@ import {useDispatch, useSelector} from "react-redux"
 import { useHistory } from "react-router";
 import { loginFailure, loginRequest, loginSuccess } from "../../Redux/auth/actions";
 import { auth } from "../../Utils/fireBase";
+import Loading from "./Loading";
+import firebase from "firebase/app"
 
 
 export const Login = () => {
@@ -28,7 +30,7 @@ export const Login = () => {
     dispatch(loginRequest())
 return auth.signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
-    // Signed in
+
     const user = userCredential.user;
     dispatch(loginSuccess(user))
     history.push("/")
@@ -39,11 +41,42 @@ return auth.signInWithEmailAndPassword(email, password)
   });
 }
 
+const handleGoogleSingIn =()=>{
+  var provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider)
+  .then((result) => {
+     const user = result.user;
+
+    dispatch(loginSuccess(user))
+    history.push("/")
+
+  }).catch((error) => {
+    dispatch(loginFailure(error.message))
+    alert("wrong credentials")
+  });
+
+}
+const handleFacebookSignIN =()=>{
+  var provider = new firebase.auth.FacebookAuthProvider();
+  auth.signInWithPopup(provider)
+  .then((result) => {
+     const user = result.user;
+
+    dispatch(loginSuccess(user))
+    history.push("/")
+
+  }).catch((error) => {
+    dispatch(loginFailure(error.message))
+    alert("wrong credentials")
+  });
+
+}
+
  
   return isAuth? <Redirect to="/" push/> : (
     <div className={styles.loginflex}>
       <div className={styles.car}>
-        <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={2000}>
+      {isLoading? <Loading height={500} width={700} /> :    <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={3000}>
           <div>
             <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg" />
             <h2 className={styles.head2}>Job Alerts</h2>
@@ -59,7 +92,7 @@ return auth.signInWithEmailAndPassword(email, password)
             <h2 className={styles.head2}>Apply Quickly</h2>
             <span className={styles.subHead}>Save Time and Effort with monster Quick Apply</span>
           </div>
-        </Carousel>
+        </Carousel> }
       </div>
       <div className={styles.logFm}>
         <h2 className={styles.mainHead}>Hello!</h2>
@@ -79,7 +112,7 @@ return auth.signInWithEmailAndPassword(email, password)
             <Link >Forgot password</Link>
           </div>
           <br />
-          <input type="submit" className={styles.btn} value={isLoading? "Loading..." : "Login"} />
+     <input type="submit" className={styles.btn} value={isLoading? "Loading..." : "Login"} />
           <br />
         </form>
         <div className={styles.extra}>
@@ -90,12 +123,12 @@ return auth.signInWithEmailAndPassword(email, password)
           <hr />
           <div className={styles.social}> 
             <span className={styles.spaan}> Or Login via socials</span>
-            <Link>
+            <button onClick={handleFacebookSignIN}>
               <img src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
-            </Link>
-            <Link>
+            </button>
+            <button onClick={handleGoogleSingIn}>
               <img src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
-            </Link>
+            </button>
           </div>
           <hr />
           <Link to={"/seeker/registration"}>

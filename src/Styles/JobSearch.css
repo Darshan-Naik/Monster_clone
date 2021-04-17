@@ -1,18 +1,19 @@
 .searchJob_fullBody{
     background-color: rgb(244,244,245);
-    margin-top: -20px;
-    height: 1000px;
-
+    margin: 20px auto;
+    margin-top: 0;
 }
 .searchJob_fullBody form{
-    max-width:1000px;
+    max-width:700px;
     width: 80%;
+    padding:0 20px;
 }
 
 .multipleInputs{
 display: flex;
-justify-content: center;
-padding: 0 18px 0 43px;
+justify-content: flex-start;
+padding: 0 28px 0 32px;
+
 }
 .searchBoxAdvance{
     justify-content: center;
@@ -29,10 +30,9 @@ padding: 0 18px 0 43px;
 }
 
 .searchJob_inputBody{
-    width: 65%;
+    width: 95%;
     background-color: white;
     float: left;
-    margin-left: 100px;
     height: fit-content;
     padding-top: 30px;
 }
@@ -40,8 +40,6 @@ padding: 0 18px 0 43px;
     width:20%;
     background-color: white;
     height: fit-content;
-    float: right;
-    margin-right: 80px;
     color: blue;
     font-family: unset;
     font-size: 15px;
@@ -57,7 +55,6 @@ padding: 0 18px 0 43px;
     color: black;
 }
 .tipbox{
-    float: right;
     text-align: left;
     width: 95%;
     font-size: 14px;
@@ -92,7 +89,8 @@ padding: 0 18px 0 43px;
     border: 1px solid rgb(205,205,204);
     margin-top: 15px;
     width: 90%;
-    margin-left: 42px;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
    
     
@@ -103,7 +101,7 @@ padding: 0 18px 0 43px;
     border: 1px solid rgb(205,205,204);
     margin-top: 20px;
     width: 43%;
-   flex-grow: 1;
+    flex-grow: 1;
     margin-right: 5px;
    padding-left: 10px;
     
@@ -116,7 +114,8 @@ padding: 0 18px 0 43px;
     height: 40px;
     margin-top: 12px;
     background: rgb(108,85,219);
-    margin-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     color: white;
     font-weight: 500;

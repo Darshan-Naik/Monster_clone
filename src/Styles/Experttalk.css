@@ -1,10 +1,11 @@
 .Expertbody{
-    width: 76%;
+    width: 65%;
     height:320px;
     background: white;
     margin: auto;
     font-family: unset;
     margin-bottom: 20px;
+    padding: 10px;
     
     
 }
