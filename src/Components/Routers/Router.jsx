@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
 import ErrorPage from '../Pages/ErrorPage'
 import Home from '../Pages/Home'
+import JobResultDetails from '../Pages/JobResultDetails'
 import { Jobsearch } from '../Pages/JobSearchPage'
 import { Login } from '../Pages/Login'
 import Results from '../Pages/Results'
@@ -32,6 +33,10 @@ function Router() {
                 <Route path="/seeker/registration">
                     <SignUp/>
                 </Route>
+                <Route path="/result/job/:id">
+                    <JobResultDetails/>
+                </Route>
+                
 
                     <Route>
                         <ErrorPage />
