@@ -12,8 +12,8 @@ function Courses() {
             <p>Fast track your way up the career 
                 ladder! Expand learning and skills, 
                 take an online certificate course or opt 
-                for an e-learning certification to<span> fast track
-                 your way up the career ladder.</span></p>
+                for an e-learning certification to<strong> fast track
+                 your way up the career ladder.</strong></p>
         </div>
         <div className="courses__cards">
             <div className="courses__card">

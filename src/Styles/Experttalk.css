@@ -1,5 +1,5 @@
 .Expertbody{
-    width: 70%;
+    width: 76%;
     height:320px;
     background: white;
     margin: auto;
@@ -20,7 +20,6 @@
     width: 80%;
     display: flex;
     flex-direction: row;
-    margin-right: 30px;
     font-size: 15px;
    
     

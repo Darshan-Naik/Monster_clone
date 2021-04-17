@@ -1,9 +1,10 @@
 .courses{
-    width: 78%;
-    height: 550px;
+    width: 76%;
+    height: 500px;
     margin: auto;
     background-color: white;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 .courses__header{
     margin-left: 20px;
@@ -45,6 +46,9 @@
 .courses__footer{
     height: 200px;
     border: 1px solid rgb(240, 232, 232);
+    text-align: left;
+    padding-inline-start: 10px;
+    
 }
 
 .courses__footer>p{

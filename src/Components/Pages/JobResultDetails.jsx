@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import "./../../Styles/JobCardDetails.css"
 import  axios  from 'axios';
+import { useParams } from 'react-router';
 const init={
     id:"",
     job_title:"",
@@ -15,11 +16,14 @@ const init={
     about:"",
     contact_hr:""
 }
-function JobCardDetails() {
+function JobResultDetails() {
    const [data,setData]=React.useState(init)
+   const {id}=useParams()
+
+
 
     const config=()=>{
-   axios.get("https://ashish-first-server.herokuapp.com/job/1")
+   axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
 .then((res)=>setData(res.data))
  .catch((err)=>(err))   
 }
@@ -59,7 +63,7 @@ console.log(data)
          </div>
          <div id="JobCard_2"> 
             <div>
-             <h3>Job Description</h3>
+             <p>Job Description</p>
              </div>  
              <div id="JobCard_2_1">
                  <ul>
@@ -72,10 +76,13 @@ console.log(data)
              <p>About Company</p>
              <div>{data.about}</div>
           <div id="JobCard_3_1">
-              <div>Role: {data.Role}</div>
-             { data.skills && <div>Skills: {data.skills.map((item)=><span>{item}</span>)}</div>}
-              <div>Company Url: {data.company_url}</div>
-              <div>Contact Hr:{data.contact_hr}</div>
+              <p>Job Details</p>
+              <div><strong>Role :</strong>{data.Role}</div>
+            
+              <div><strong>Company Url : </strong>{data.company_url}</div>
+              { data.skills && <div className="skill"><strong>Skills:</strong> {data.skills.map((item)=><span><div className="JobCard_3_1_skill">{item}</div></span>)}</div>}
+              <div><strong>Contact Hr : </strong>{data.contact_hr}</div>
+              
 
             
           </div>
@@ -87,4 +94,4 @@ console.log(data)
     )
 }
 
-export default JobCardDetails
+export default JobResultDetails

@@ -1,0 +1,66 @@
+.ImageBox{
+    display: flex;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: white;
+    scroll-behavior: smooth;
+    transition: all 300ms ease-in-out;
+}
+
+.ImageBox::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+
+.ellipsis{
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden; 
+    color: teal;
+    width: 150px;
+}
+.MainImageBox{
+    text-align: left;
+    margin:10px auto;
+    width: 1000px;
+    border: 1px solid rgba(151, 151, 151, 0.322);
+    padding: 0 15px 25px 15px;
+    position: relative;
+    background-color: white;
+}
+.MainImageBox>h2{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.PrvBtn{
+    position: absolute;
+    left: 20px;
+    top: 115px;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+}
+.NxtBtn{
+    position: absolute;
+    right: 10px;
+    top: 115px;
+    padding:0 10px;
+    margin-top: -20px;
+}
+.NxtBtn >button,.PrvBtn>button{
+    box-shadow: 0px 0px 10px rgb(7, 197, 197);
+    padding: 5px 12px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+    
+}
+.NxtBtn >button:hover,.PrvBtn>button:hover{
+    box-shadow: -1px -1px 15px rgb(8, 196, 196);
+}
