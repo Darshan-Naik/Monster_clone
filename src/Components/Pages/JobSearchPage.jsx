@@ -4,6 +4,7 @@ import '../../Styles/JobSearch.css'
 import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from '../../Utils/localData';
 
 import { useHistory } from 'react-router';
+import RegisterAdd from './RegisterAdd';
 const init={
     job_title:"",
     Role:"",
@@ -16,7 +17,6 @@ const init={
 }
 function Jobsearch(){
 const [search, setSearch] = React.useState(init)
-
 const{job_title,Role,experience,location,company,jobtype,max_salary,min_salary}=search
 const handleChange=(e)=>{
     const{name,value}=e.target
@@ -92,7 +92,9 @@ const handleSubmit=(e)=>{
                         </datalist>
                         </div>
                         <input className="search_button" type="submit" value="SEARCH" onClick={handleSubmit}/>
+                        <RegisterAdd />
                         </div>
+                        
                         </form>
                     <div className="searchjob_searchTipBody">
                         <p>search Tips</p>
@@ -110,9 +112,13 @@ const handleSubmit=(e)=>{
                     </div>
                     </div> 
                     </div>)}
+                    
                     </div>
+                    
               </div>
+              
           </div>
+          
         </div>
     )
 }export{Jobsearch}

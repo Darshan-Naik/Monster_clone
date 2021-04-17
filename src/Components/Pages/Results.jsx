@@ -8,6 +8,7 @@ import NoResultFound from './NoResultFound'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import Loading from './Loading'
+import JobSearchBySkills from './JobSearchBySkills'
 
 function Results() {
     const param = new URLSearchParams(window.location.search)
@@ -93,7 +94,7 @@ function Results() {
                         <p>Applied Filters : {filters.map(item=><span onClick={()=>removeFilter(item)}>{item}   -</span>)}</p>
                 </div>): null}
                     
-                    { isLoading? <Loading/>: filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
+                    { isLoading?<div className="loadingBox"> <Loading/> </div>: filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
                     }
                 </div>
                 <div>
@@ -112,6 +113,7 @@ function Results() {
                         <p>GIVE YOUR CAREER A BOOST WITH MONSTER'S RESUME SERVICES.</p>
                         <Link>Know more</Link>
                     </div>
+                    <JobSearchBySkills />
                 </div>
                 
                 </div>
