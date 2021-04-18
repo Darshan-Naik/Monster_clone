@@ -37,10 +37,8 @@ axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
 })
  .catch((err)=>(err))   
 }
-
 console.log(new Date)
  useEffect(() => {
-   
     config()
  }, [id])   
 const history = useHistory()
@@ -68,11 +66,8 @@ const history = useHistory()
     .catch(()=>{
       alert("Something wmt wrong")
     })
-
    }
-
  }
-  
     return isLoading?<div className="loadingBox"><Loading /></div> : (
    <div>
       <div id="jobCardDetailsBody">
@@ -106,17 +101,13 @@ const history = useHistory()
              <div id="JobCard_2_1">
                  <ul>
                 {data.description.map((item)=><li>{item}</li>)}
-                        
                  </ul>
              </div>
          </div>
        <RegisterAdd />
-
-
          <div id="JobCard_3_1">
               <p>Job Details</p>
               <div><strong>Role : </strong>{data.Role}</div>
-            
               <div><strong>Company Url : </strong>{data.company_url}</div>
               { data.skills && <div className="skill"><strong>Skills:</strong> {data.skills.map((item)=><span><div className="JobCard_3_1_skill">{item}</div></span>)}</div>}
               <div><strong>Contact Hr : </strong>{data.contact_hr}</div>
@@ -131,9 +122,7 @@ const history = useHistory()
           {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id != id)
           .map(item=><ResultCard {...item}/>)}
         </div> : null}
-     
     </div>
     )
 }
-
 export default JobResultDetails

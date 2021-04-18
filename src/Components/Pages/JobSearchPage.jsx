@@ -1,8 +1,6 @@
 import React from 'react';
 import '../../Styles/JobSearch.css'
-
 import { Roledata,Companydata,Jobtypedata,Tips,Maximumsalary,Minimumsalary } from '../../Utils/localData';
-
 import { useHistory } from 'react-router';
 import RegisterAdd from './RegisterAdd';
 const init={
@@ -25,7 +23,6 @@ const handleChange=(e)=>{
 const history=useHistory()
 const handleSubmit=(e)=>{
     e.preventDefault()
-    
    const params={ }
    for(let key in search)
    {
@@ -43,9 +40,6 @@ const handleSubmit=(e)=>{
     history.push(`/result?${param.toString()}`)
     console.log(param.toString())
 }
-
-
-
     return(
         <div>
           <div className="searchJob_fullBody">
@@ -94,7 +88,6 @@ const handleSubmit=(e)=>{
                         <input className="search_button" type="submit" value="SEARCH" onClick={handleSubmit}/>
                         <RegisterAdd />
                         </div>
-                        
                         </form>
                     <div className="searchjob_searchTipBody">
                         <p>search Tips</p>
@@ -112,13 +105,26 @@ const handleSubmit=(e)=>{
                     </div>
                     </div> 
                     </div>)}
-                    
                     </div>
-                    
               </div>
-              
           </div>
-          
         </div>
     )
 }export{Jobsearch}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

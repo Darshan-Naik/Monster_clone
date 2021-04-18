@@ -17,6 +17,8 @@ export const ImageCarousel=["https://media.monsterindia.com/trex/prod-cdn/media/
 
 export const TipImage=[{image:"https://media.monsterindia.com/seeker_2014/social/careercenter/taxation.png",
                         title:"Taxtion and Savings"},
+                        {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/taxation.png",
+                        title:"Taxtion and Savings"},
                         {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_startup.png",
                         title:"Startups"},
                         {image:"https://media.monsterindia.com/seeker_2014/social/careercenter/icon_cii.png",
@@ -56,4 +58,81 @@ export const Tips=[
     details :"Use Walk-in Jobs to get a job fast Walk-in Jobs provide direct access to the walk-in opportunities available with top companies." },
     {title:"Exact Job Search",
     details :"Looking for an keyword search?Put double quotes around the keyword to search for exact word/phrases." }
+  ]
+  export const pending=[
+    {
+      title:"Resume",
+      action:"Add 30%",
+    },
+    {
+      title:"Verify Email Id",
+      action:"Add 7%",
+    },
+    {
+      title:"Profile Picture",
+      action:"Add 2%",
+    },
+    {
+      title:"Role",
+      action:"Add 2%",
+    },
+    {
+      title:"Preferred Location",
+      action:"Add 3%",
+    },
+    {
+      title:"Skills",
+      action:"Add 8%",
+    },
+    {
+      title:"Course And Certification",
+      action:"Add 7%",
+    },
+    {
+      title:"Projects",
+      action:"Add 9%",
+    }
+  ]
+  export const UserData=[
+    {
+      title:"Resume",
+      details:"A must to get the attention of recruiters to Find Better Jobs. Faster.",
+    },
+    {
+      title:"Skills",
+      details:"Helps recruiter in finding you for relevant jobs.",
+    },
+    {
+      title:"IT Skills",
+      details:"Helps recruiter in finding you for relevant jobs.",
+    },
+    {
+      title:"Work Experience",
+      details:"Helps recruiters map your candidature against job vacancies they may have.",
+    },
+    {
+      title:"Educational Details",
+      details:"Add your Education details to increase your chances of getting a job faster",
+    },
+    {
+      title:"Projects",
+      details:"Add projects that you want to showcase.",
+    },
+    {
+      title:"Courses & Certifications",
+      details:"Enter details of any professional course or certification you may have done.",
+    },
+    {
+      title:"Languages Known",
+      details:"Add the languages you know.",
+    },
+    {
+      title:"Awards & Achievements",
+      details:"Enter details of any awards you may have received.",
+    },
+    {
+      title:"Online Presence",
+      details:"Enter URL of your Facebook/Twitter/LinkedIn profiles",
+    }
+
   ]
