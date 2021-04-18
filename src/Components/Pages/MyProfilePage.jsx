@@ -12,7 +12,7 @@ return (
 <div>
     <div className="profile_head">
         <h2>MyProfile</h2>
-        <p>{Data.lastLoginAt.toDate().toString()}</p>
+        <p>{Data.lastLoginAt}</p>
     </div>
     <div className="profile_body">
         <div className="profile_details">

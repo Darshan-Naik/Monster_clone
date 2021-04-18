@@ -6,7 +6,6 @@ import HomeCarousel from './HomeImageCarousel'
 import JobCarousel from './JobCarousel'
 import MainSearchBox from './MainSearchBox'
 import { MonsterReport } from './MonsterReport'
-import MyProfilePage from './MyProfilePage'
 import Resumeservices from './Resumeservices'
 function Home() {
 return (
@@ -19,7 +18,7 @@ return (
     <MonsterReport />
     <ExperTalks />
     <CareerTip />
-    <MyProfilePage/>
+  
     
 
 </div>
