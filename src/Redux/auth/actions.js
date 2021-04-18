@@ -1,6 +1,6 @@
-import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
+import { EMPLOYER_LOGIN_SUCCESS, EMPLOYER_REGISTER_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
 import { auth } from "../../Utils/fireBase"
-
+import axios from "axios"
 //Login actions--------------->
 
 const loginRequest=()=>{
@@ -42,6 +42,19 @@ const registerFailure=()=>{
 const registerSuccess=(payload)=>{
     return {
         type: REGISTER_SUCCESS,
+        payload
+    }
+}
+const employerRegisterSuccess=(payload)=>{
+    return {
+        type: EMPLOYER_REGISTER_SUCCESS,
+        payload
+    }
+}
+
+const employerLoginSuccess=(payload)=>{
+    return {
+        type: EMPLOYER_LOGIN_SUCCESS,
         payload
     }
 }
@@ -90,4 +103,19 @@ const register=({email,password,...info})=>(dispatch)=>{
 }
 
 
-export {register,login,logoutSuccess,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess}
+// Register network request -----> 
+const employerRegister=(user)=>(dispatch)=>{
+
+    dispatch(registerRequest())
+    return axios.post("https://ashish-first-server.herokuapp.com/employers",user)
+    
+    .then((res)=>{
+        dispatch(employerRegisterSuccess(res.data))
+    })
+    .catch(()=>{
+        dispatch(registerFailure())
+    })
+}
+
+
+export {register,login,logoutSuccess,registerFailure,registerSuccess,registerRequest,loginFailure,loginRequest,loginSuccess,employerRegister,employerLoginSuccess}

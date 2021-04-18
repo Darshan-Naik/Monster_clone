@@ -1,0 +1,80 @@
+.employerHomeBanner{
+    background-image: url("https://www.hour-timebank.ie/wp-content/uploads/2017/06/blog-banner.png");
+    position: relative;
+    height: 150px;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+.employerHomeBanner img{
+    position:absolute;
+    bottom: -70px;
+    width: 150px;
+    left: 50px;
+}
+.employerHomeBanner *{
+    margin: 0;
+    font-size: 14px;
+}
+.employerHomeBanner div{
+    position:absolute;
+    bottom: -25px;
+    width: 300px;
+    left: 130px;
+}
+.employerHomeBanner div>h2{
+    color: white;
+    font-size: 24px;
+}
+.employerHomeMainBox{
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap:10px;
+}
+.employerHomeMainBox>div>.employerHomeMainBoxHead{
+background-color: rgb(136, 111, 245);
+border: 1px solid teal;
+color: white;
+
+}
+.employerHomeMainBoxHead h3{
+    margin: 5px;
+    font-weight: 400;
+}
+.employerHomeMainBox>div{
+    border: 1px solid teal;
+}
+.employerJobCard{
+    background-color: rgb(231, 231, 231);
+    margin: 10px;
+    text-align: left;
+    padding:10px;
+}
+.employerJobCard *{
+    margin: 0;
+   white-space: nowrap;
+   max-width:400px ;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   
+}
+.dataBox{
+    height: 50vh;
+    overflow: auto;
+}
+.employerApplicationCard{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+    margin: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+.employerApplicationCard *{
+    margin: 0;
+}

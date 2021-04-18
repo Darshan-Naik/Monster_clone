@@ -11,7 +11,9 @@ const isAuth = useSelector(store=>store.auth.isAuth)
 const userEmail = useSelector(store=>store.auth.userData.email)
 const userName = useSelector(store=>store.auth.userData.displayName)
 const profilePic = useSelector(store=>store.auth.userData.photoURL)
-console.log(profilePic)
+const userData = useSelector(store=>store.auth.userData)
+
+console.log(userData)
 const [state,setState] = React.useState(true)
 const dispatch = useDispatch()
 const handleLogout=()=>{
@@ -49,7 +51,7 @@ const handleLogout=()=>{
 
              : (  <div >
                     <Link to="/login" className="loginBtn" ><img width="20px" src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" alt="user"/>  JOBSEEKER LOGIN</Link>
-                    <Link to="/login" className="loginBtnEmp" >Login as Employer instead</Link>
+                    <Link to="/employer/login" className="loginBtnEmp" >Login as Employer instead</Link>
                 </div>) }
             </div>
         </div>

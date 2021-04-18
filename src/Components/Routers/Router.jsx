@@ -1,5 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Route, Switch } from 'react-router'
+import EmployerHome from '../EmployerPages/EmployerHome'
+import EmployerLogin from '../EmployerPages/EmployerLogin'
+import EmployerNavbar from '../EmployerPages/EmployerNavbar'
+import EmployerSingUp from '../EmployerPages/EmployerSingUp'
+import JobPost from '../EmployerPages/JobPost'
 import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
 import { CareerTipMainPage } from '../Pages/CareerTipMainPage'
@@ -10,45 +16,58 @@ import { Jobsearch } from '../Pages/JobSearchPage'
 import { Login } from '../Pages/Login'
 import Results from '../Pages/Results'
 import { SignUp } from '../Pages/SignUp'
+import PrivateRouter from './PrivateRouter'
 
 function Router() {
+    const isAdmin = useSelector(store=>store.auth.isAdmin)
     return (
         <div>
-            <NavBar />
+            {isAdmin?<EmployerNavbar /> : <NavBar /> }
+               
             <Switch>
-                <Route path="/" exact>
+                <PrivateRouter path="/" exact>
                     <Home />
-                </Route>
-                <Route path="/job-search" exact>
+                </PrivateRouter>
+                <PrivateRouter path="/job-search" exact>
                     <Jobsearch />
-                </Route>
-                <Route path="/result" exact>
+                </PrivateRouter>
+                <PrivateRouter path="/result" exact>
                     <Results />
-                </Route>
-                <Route path="/result/:id" exact>
+                </PrivateRouter>
+                <PrivateRouter path="/result/:id" exact>
                     <Results />
-                </Route>
-                <Route path="/login">
+                </PrivateRouter>
+                <PrivateRouter path="/login">
                     <Login />
-                </Route>
-                <Route path="/seeker/registration">
+                </PrivateRouter>
+                <PrivateRouter path="/seeker/registration">
                     <SignUp/>
-                </Route>
-                <Route path="/result/job/:id">
+                </PrivateRouter>
+                <PrivateRouter path="/result/job/:id">
                     <JobResultDetails/>
-                </Route>
-                <Route path="/career-tips">
+                </PrivateRouter>
+                <PrivateRouter path="/career-tips">
                     <CareerTipMainPage/>
-                </Route>
+                </PrivateRouter>
+                <Route exact path="/employer">
+                    <EmployerHome/>
+                </Route> 
                 
-
+                <Route path="/employer/login">
+                    <EmployerLogin/>
+                </Route> 
+                  <Route path="/employer/sign-up">
+                    <EmployerSingUp/>
+                </Route>   
+                <Route path="/employer/post-job">
+                    <JobPost/>
+                </Route>           
                     <Route>
                         <ErrorPage />
                     </Route>
                 </Switch>
-
-
-            <Footer />
+            
+            {isAdmin?null: <Footer /> }
         </div>
     )
 
