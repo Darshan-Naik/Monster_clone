@@ -1,16 +1,17 @@
 import React from 'react'
-import { useStore } from 'react-redux'
+import { useSelector, useStore } from 'react-redux'
 import { Redirect, Route } from 'react-router'
 
 
-function PrivateRouter({path,children,redirectPath="/",exact = false,push = false}) {
+function PrivateRouter({path,children,redirectPath="/employer",exact = false,push = false}) {
 
-    const isAuth = useStore(store=>store.auth.isAuth);
-    return isAuth? (
+    const isAdmin = useSelector(store=>store.auth.isAdmin);
+    console.log(isAdmin)
+    return isAdmin?<Redirect to={redirectPath} push={push}/> : (
         <Route path={path} exact={exact}>
             {children}
         </Route>
-    ) : <Redirect to={redirectPath} push={push}/>
+    ) 
 }
 
 export default PrivateRouter

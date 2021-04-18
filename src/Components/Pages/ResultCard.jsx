@@ -13,7 +13,7 @@ function ResultCard({job_title,company_url,job_type,company_name,location,experi
                 <div className="flexBox space">
                     <p>
                         <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-512.png" alt="Location"/>
-                        {location.map(item=><span key={item}>{item}, </span>)}
+                        {location?.map(item=><span key={item}>{item}, </span>)}
                     </p>
                     <p>
                         <img src="https://pics.freeicons.io/uploads/icons/png/16650192161582800237-512.png" alt="Experience"/> 
@@ -25,8 +25,8 @@ function ResultCard({job_title,company_url,job_type,company_name,location,experi
                     </p>
                     
                 </div>
-                    <p>{description[0]}</p>
-                    <p> <strong>Skills</strong> : {skills.map(item=><span key={item +Math.random()}>{item}, </span>)}</p>
+                    <p>{description && description[0]}</p>
+                    <p> <strong>Skills</strong> : {skills && skills.map(item=><span key={item +Math.random()}>{item}, </span>)}</p>
                     </div>  </Link>
             <div className="flexBox applyNow">
                      <Link to={isAuth?`/result/job/${id}`: "/login"}>{isAuth?"APPLY NOW" : "LOGIN TO APPLY"}</Link>

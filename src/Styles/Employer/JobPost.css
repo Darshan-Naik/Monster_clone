@@ -1,0 +1,31 @@
+.jobPostForm{
+    display: flex;
+   flex-direction: column;
+  width: 80%;
+   margin: auto;
+text-align: left;
+}
+.jobPostMainBox{
+    background-color: white;
+    padding:10px 20px;
+    max-width: 800px;
+    margin:20px auto;
+}
+.jobPostForm input{
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid rgba(0, 128, 128, 0.397);
+}
+.jobPostForm button{
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #5d4da8;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+.jobPostForm button:hover{
+    background-color: #4a2189;
+}

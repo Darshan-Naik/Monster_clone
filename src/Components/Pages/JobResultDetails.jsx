@@ -26,6 +26,8 @@ function JobResultDetails() {
   const jobs = useSelector(store=>store.job.jobs)
   const [isLoading,setIsLoading] = React.useState(true)
   const isAuth = useSelector(store=>store.auth.isAuth)
+  const userEmail = useSelector(store=>store.auth.userData.email)
+const userName = useSelector(store=>store.auth.userData.displayName)
 const config=()=>{
   setIsLoading(true)
 axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
@@ -36,16 +38,39 @@ axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
  .catch((err)=>(err))   
 }
 
-console.log(data)
+console.log(new Date)
  useEffect(() => {
    
     config()
  }, [id])   
 const history = useHistory()
- const handleApply=()=>{
+ const handleApply=(e)=>{
    if(!isAuth){
       history.push("/login")
+   } else{
+      const application ={
+        employerId : data.employerId,
+        job_title : data.job_title,
+        applyed_date : new Date,
+        job_id : data.id,
+        applicantName: userName,
+        applicantEmail : userEmail
+      }
+    axios.post("https://ashish-first-server.herokuapp.com/applications",application)
+    .then(()=>{
+      e.target.innerText = "Applied"
+      e.target.style.background = "green"
+      e.target.disabled = true;
+      setTimeout(()=>{
+        history.push("/")
+      },1000)
+    })
+    .catch(()=>{
+      alert("Something wmt wrong")
+    })
+
    }
+
  }
   
     return isLoading?<div className="loadingBox"><Loading /></div> : (
@@ -61,7 +86,7 @@ const history = useHistory()
               <div id="JobCard_1_2_1" >
               <div>
                   <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-512.png" alt=""/>
-                <p style={{marginTop:"-24px",marginLeft:"20px"}}>{data.location.map((item)=><span>{item}, </span>)}</p> 
+                <p style={{marginTop:"-24px",marginLeft:"20px"}}>{data?.location.map((item)=><span>{item}, </span>)}</p> 
               </div>
               <div>
                 <img src="https://pics.freeicons.io/uploads/icons/png/16650192161582800237-512.png" alt=""/>

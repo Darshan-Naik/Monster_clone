@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "../../Styles/RegisterAdd.css"
 function RegisterAdd() {
   const isAuth = useSelector(store=>store.auth.isAuth)
+  
     return isAuth? null : (
         <div className="flexBox registerAdd">
         <div className="flexBox registerAddImg">
