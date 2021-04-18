@@ -123,3 +123,6 @@ transition: all 300ms ease-in-out;
     text-decoration: none;
     border-radius: 5px;
 }
+.AddBox{
+    background-color: white;
+}

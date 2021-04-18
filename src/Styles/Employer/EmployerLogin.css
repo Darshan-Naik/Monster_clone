@@ -1,0 +1,83 @@
+.EmployerLoginMainBanner{
+    background-image: url(https://media.monsterindia.com/recruiter_2015/india/images/graphic-bg.svg), url(https://media.monsterindia.com/recruiter_2015/india/images/BG.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: -23px center, center;
+    max-width: 100%;
+    min-height: 429px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 50px;
+}
+.EmployerLoginMainBanner ul li{
+    background: url(https://media.monsterindia.com/recruiter_2015/india/images/icon-bg.png) no-repeat left center;
+    padding-left: 45px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 52px;
+    list-style: none;
+    color: white;
+    text-align: left;
+}
+
+.EmployerLoginMainBox{
+    background-color: white;
+    padding: 20px;
+    color: black;
+    margin: 0 50px;
+}
+.EmployerLoginSubBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.EmployerLoginSubBox>h2{
+    margin: 0;
+    font-size: 18px;
+}
+.EmployerLoginSubBox>input{
+    margin:10px 0;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 128, 128, 0.404);
+}
+.EmployerLoginForget{
+    display: flex;
+    justify-content: flex-end;
+    color: blue;
+    text-decoration: none;
+    margin: 10px;
+}
+.EmployerLoginMainBox button{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #5d4da8;
+    transition: all 300ms;
+    color: white;
+    font-weight: 600;
+}
+.EmployerLoginMainBox button:hover{
+    background-color: #4a2189;
+}
+.EmployerLoginMainBox button:disabled{
+    background-color: rgba(0, 128, 128, 0.486);
+    border: none;
+    cursor:not-allowed;
+}
+.EmployerLoginNew{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid black;
+    margin-top: 10px;
+}
+.EmployerLoginNew strong{
+    color: blue;
+    cursor: pointer;
+}

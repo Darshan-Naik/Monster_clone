@@ -12,97 +12,97 @@ function Footer() {
 
         <div className="footer-part-1">
             <div className="flex">
-                <Link >Jobs by Locations : </Link>
+                <p >Jobs by Locations : </p>
                 <div className="subflex">
-                    <Link>Jobs in Bangalore </Link>
-                    <Link>| Jobs in Delhi </Link>
-                    <Link>| Jobs in Mumbai </Link>
-                    <Link>| Jobs in Chennai </Link>
-                    <Link>| Jobs in Hyderabad </Link>
-                    <Link>| Jobs in Kolkata </Link>
-                    <Link>| Jobs in Pune </Link>
-                    <Link>| Jobs in Chandigarh </Link>
-                    <Link>| Jobs in Lucknow </Link>
-                    <Link>| Jobs in Coimbatore </Link>
+                    <Link to="/result/Bangalore">Jobs in Bangalore </Link>
+                    <Link to="/result/Delhi">| Jobs in Delhi </Link>
+                    <Link to="/result/Mumbai">| Jobs in Mumbai </Link>
+                    <Link to="/result/Chennai">| Jobs in Chennai </Link>
+                    <Link to="/result/Hyderabad">| Jobs in Hyderabad </Link>
+                    <Link to="/result/Kolkata">| Jobs in Kolkata </Link>
+                    <Link to="/result/Pune">| Jobs in Pune </Link>
+                    <Link to="/result/Chandigarh">| Jobs in Chandigarh </Link>
+                    <Link to="/result/Lucknow">| Jobs in Lucknow </Link>
+                    <Link to="/result/Coimbatore">| Jobs in Coimbatore </Link>
                 </div>
             </div>
 
             <div className="flex">
-                <Link>Jobs by Skill - IT : </Link>
+                <p>Jobs by Skill - IT : </p>
                 <div className="subflex">
-                    <Link>Biotechnology Jobs </Link>
-                    <Link>| Digital Marketing Jobs </Link>
-                    <Link>| Graphic Design Jobs </Link>
-                    <Link>| Networking Jobs </Link>
-                    <Link>| Oracle Jobs </Link>
-                    <Link>| SEO Jobs </Link>
-                    <Link>| Software Testing Jobs </Link>
-                    <Link>| SQL Jobs </Link>
-                    <Link>| Web Design Jobs </Link>
+                    <Link to="/result/Biotechnology">Biotechnology Jobs </Link>
+                    <Link to="/result/Digital Marketing">| Digital Marketing Jobs </Link>
+                    <Link to="/result/Graphic Design">| Graphic Design Jobs </Link>
+                    <Link to="/result/Networking">| Networking Jobs </Link>
+                    <Link to="/result/Oracle">| Oracle Jobs </Link>
+                    <Link to="/result/SEO">| SEO Jobs </Link>
+                    <Link to="/result/Software Testing">| Software Testing Jobs </Link>
+                    <Link to="/result/SQL">| SQL Jobs </Link>
+                    <Link to="/result/Web Design">| Web Design Jobs </Link>
                 </div>
             </div>
 
             <div className="flex">
-                <Link>Jobs by Skill - Non IT : </Link>
+                <p>Jobs by Skill - Non IT : </p>
                 <div className="subflex">
-                    <Link>Accounting Jobs </Link>
-                    <Link>| BPO Jobs </Link>
-                    <Link>| Call Center Jobs </Link>
-                    <Link>| Civil Engineering Jobs </Link>
-                    <Link>| Content Writing Jobs </Link>
-                    <Link>| Electrical Engineering Jobs </Link>
-                    <Link>| Event Management Jobs </Link>
-                    <Link>| Hotel Management Jobs </Link>
-                    <Link>| HR Jobs </Link>
-                    <Link>| Sales Jobs </Link>
+                    <Link to="/result/Accounting">Accounting Jobs </Link>
+                    <Link to="/result/BPO">| BPO Jobs </Link>
+                    <Link to="/result/Call">| Call Center Jobs </Link>
+                    <Link to="/result/Civil">| Civil Engineering Jobs </Link>
+                    <Link to="/result/Content Writing">| Content Writing Jobs </Link>
+                    <Link to="/result/Electrical">| Electrical Engineering Jobs </Link>
+                    <Link to="/result/Event">| Event Management Jobs </Link>
+                    <Link to="/result/Hotel">| Hotel Management Jobs </Link>
+                    <Link to="/result/HR">| HR Jobs </Link>
+                    <Link to="/result/Sales">| Sales Jobs </Link>
                 </div>
             </div>
 
             <div className="flex">
-                <Link>Jobs by Role : </Link>
+                <p>Jobs by Role : </p>
                 <div className="subflex">
-                    <Link>Air Hostess Jobs </Link>
-                    <Link>| Accountant Jobs </Link>
-                    <Link>| Assistant Professor Jobs </Link>
-                    <Link>| Busines Analyst Jobs </Link>
-                    <Link>| Computer Operator Jobs </Link>
-                    <Link>| Data Analyst Jobs </Link>
-                    <Link>| Data Entry Operator Jobs </Link>
-                    <Link>| Fashion Designer Jobs </Link>
-                    <Link>| Graphic Designer Jobs </Link>
-                    <Link>| Software Engineer Jobs </Link>
+                    <Link to="/result/Air Hostess">Air Hostess Jobs </Link>
+                    <Link to="/result/Accountant">| Accountant Jobs </Link>
+                    <Link to="/result/Professor">| Assistant Professor Jobs </Link>
+                    <Link to="/result/Analyst">| Business Analyst Jobs </Link>
+                    <Link to="/result/Operator">| Computer Operator Jobs </Link>
+                    <Link to="/result/Data Analyst">| Data Analyst Jobs </Link>
+                    <Link to="/result/Data Entry">| Data Entry Operator Jobs </Link>
+                    <Link to="/result/Fashion Designer">| Fashion Designer Jobs </Link>
+                    <Link to="/result/Graphic Designer">| Graphic Designer Jobs </Link>
+                    <Link to="/result/Software Engineer">| Software Engineer Jobs </Link>
                 </div>
             </div>
 
             <div className="flex">
-                <Link>International Jobs : </Link>
+                <p>International Jobs : </p>
                 <div className="subflex">
-                    <Link>Jobs in Gulf </Link>
-                    <Link>| Jobs in Singapore </Link>
-                    <Link>| Jobs in Malaysia </Link>
-                    <Link>| Jobs in Philippines </Link>
-                    <Link>| Jobs in Hong Kong </Link>
-                    <Link>| Jobs in Vietnam </Link>
-                    <Link>| Jobs in Indonesia </Link>
-                    <Link>| Jobs in Thailand </Link>
-                    <Link>| Jobs in Dubai </Link>
-                    <Link>| Jobs in UAE </Link>
+                    <Link to="/result/Gulf">Jobs in Gulf </Link>
+                    <Link to="/result/Singapore">| Jobs in Singapore </Link>
+                    <Link to="/result/Malaysia">| Jobs in Malaysia </Link>
+                    <Link to="/result/Philippines">| Jobs in Philippines </Link>
+                    <Link to="/result/Hong Kong">| Jobs in Hong Kong </Link>
+                    <Link to="/result/Vietnam">| Jobs in Vietnam </Link>
+                    <Link to="/result/Indonesia">| Jobs in Indonesia </Link>
+                    <Link to="/result/Thailand">| Jobs in Thailand </Link>
+                    <Link to="/result/Dubai">| Jobs in Dubai </Link>
+                    <Link to="/result/UAE">| Jobs in UAE </Link>
                 </div>
             </div>
 
             <div className="flex">
-                <Link>Other Jobs : </Link>
+                <p>Other Jobs : </p>
                 <div className="subflex">
-                    <Link>Walk-in Jobs </Link>
-                    <Link>| Part Time Jobs </Link>
-                    <Link>| Contract Jobs </Link>
-                    <Link>| Jobs for Women </Link>
-                    <Link>| Fresher Jobs </Link>
-                    <Link>| Freelance Jobs </Link>
-                    <Link>| Wor from Home Jobs </Link>
-                    <Link>| 12th Pass Jobs </Link>
-                    <Link>| 10th Pass Jobs </Link>
-                    <Link>| Diploma Jobs </Link>
+                    <Link to="/result/Walk-in">Walk-in Jobs </Link>
+                    <Link to="/result/Part Time">| Part Time Jobs </Link>
+                    <Link to="/result/Contract">| Contract Jobs </Link>
+                    <Link to="/result/Women">| Jobs for Women </Link>
+                    <Link to="/result/Fresher">| Fresher Jobs </Link>
+                    <Link to="/result/Freelance">| Freelance Jobs </Link>
+                    <Link to="/result/Work from Home">| Work from Home Jobs </Link>
+                    <Link to="/result/12th Pass">| 12th Pass Jobs </Link>
+                    <Link to="/result/10th Pass">| 10th Pass Jobs </Link>
+                    <Link to="/result/Diploma">| Diploma Jobs </Link>
                 </div>
             </div>
         </div>
@@ -141,18 +141,18 @@ function Footer() {
 
         <div className="flex3">
             <ul>Job Seekers
-                <li> <Link>Job Search</Link> </li>
-                <li> <Link>Job Seekers login</Link> </li>
-                <li> <Link>Upload Resume</Link> </li>
-                <li> <Link>Career Advice</Link> </li>
-                <li> <Link>Search Tips</Link> </li>
+                <li> <Link to="/job-search">Job Search</Link> </li>
+                <li> <Link to="/login">Job Seekers login</Link> </li>
+                <li> <Link  to="/login">Upload Resume</Link> </li>
+                <li> <Link to="/career-tips">Career Advice</Link> </li>
+                <li> <Link to="/job-search" >Search Tips</Link> </li>
                 <li> <Link>Free Job Alert</Link> </li>
-                <li> <Link>Find Companies</Link> </li>
+                <li> <Link to="/job-search">Find Companies</Link> </li>
                 <li> <Link>Help</Link> </li>
             </ul>
 
             <ul>Employers
-                <li> <Link>Employer Login</Link> </li>
+                <li> <Link >Employer Login</Link> </li>
                 <li> <Link>Job Posting</Link> </li>
                 <li> <Link>Access Resume Database</Link> </li>
                 <li> <Link>Join mRecruiters</Link> </li>

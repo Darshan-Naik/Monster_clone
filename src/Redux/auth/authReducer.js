@@ -1,6 +1,6 @@
 
 import { loadData, saveData } from "../../Utils/localStorage"
-import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
+import { EMPLOYER_LOGIN_SUCCESS, EMPLOYER_REGISTER_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
 
 
 
@@ -8,7 +8,9 @@ const init =  loadData("userData") ||  {
     isAuth : false,
     isLoading : false,
     isError : false,
-    userData : {}
+    userData : {},
+    isAdmin : false,
+    admin : {}
 }
 
 const authReducer =(state=init,{type,payload})=>{
@@ -58,11 +60,35 @@ const authReducer =(state=init,{type,payload})=>{
                 isLoading :false
             }
         }
+        case EMPLOYER_REGISTER_SUCCESS :{
+            const updateState = {
+                ...state,
+                isLoading :false,
+                isError :false,
+                isAdmin : true,
+                admin : payload
+            }
+           saveData("userData",updateState)
+            return updateState
+        }
+        case EMPLOYER_LOGIN_SUCCESS :{
+            const updateState = {
+                ...state,
+                isLoading :false,
+                isError :false,
+                isAdmin : true,
+                admin : payload
+            }
+           saveData("userData",updateState)
+            return updateState
+        }
         case LOGOUT_SUCCESS : {
             const updateState = {
                 ...state,
                 isAuth : false,
-                userData : {}
+                userData : {},
+                isAdmin : false,
+                admin : {}
             }
             saveData("userData",updateState)
             return updateState
