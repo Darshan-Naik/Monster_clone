@@ -38,7 +38,7 @@ const handleLogout=()=>{
                 </div>
              {isAuth? 
                 <div className="userProfile" onMouseEnter={()=>setState(false)} onMouseLeave={()=>setState(true)}>
-                    <img src={profilePic || "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png"} alt="Profile"/>
+            <Link to="/user-profile">    <img src={profilePic || "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png"} alt="Profile"/></Link>
                     <div>
                       {state? <> <p>{userName || "User"}</p>
                         <p>{userEmail}</p> </> :

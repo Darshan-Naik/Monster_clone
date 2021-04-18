@@ -14,6 +14,7 @@ import Home from '../Pages/Home'
 import JobResultDetails from '../Pages/JobResultDetails'
 import { Jobsearch } from '../Pages/JobSearchPage'
 import { Login } from '../Pages/Login'
+import MyProfilePage from '../Pages/MyProfilePage'
 import Results from '../Pages/Results'
 import { SignUp } from '../Pages/SignUp'
 import PrivateRouter from './PrivateRouter'
@@ -48,6 +49,9 @@ function Router() {
                 </PrivateRouter>
                 <PrivateRouter path="/career-tips">
                     <CareerTipMainPage/>
+                </PrivateRouter>
+                <PrivateRouter path="/user-profile">
+                    <MyProfilePage/>
                 </PrivateRouter>
                 <Route exact path="/employer">
                     <EmployerHome/>
