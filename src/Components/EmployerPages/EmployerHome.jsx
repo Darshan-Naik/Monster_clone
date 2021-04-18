@@ -6,6 +6,7 @@ import EmployerJobCard from './EmployerJobCard'
 import { Redirect } from 'react-router'
 import Loading from '../Pages/Loading'
 import EmployerApplicationCard from './EmployerApplicationCard'
+import WelCome from './WelCome'
 
 function EmployerHome() {
     const admin = useSelector(store=>store.auth.admin)
@@ -32,8 +33,25 @@ function EmployerHome() {
             alert("Something went wrong")
         })
     }
+    const handleDelete=(id)=>{
+        // axios.delete("https://ashish-first-server.herokuapp.com/job/"+id)
+        // .then(()=>{
+        //     getData();
+        // })
+    }
+    const handleApplicationDelete=(id)=>{
+        axios.delete("https://ashish-first-server.herokuapp.com/applications/"+id)
+        .then(()=>{
+            getData();
+        })
+    }
 
-
+    const handleToggle=(id,status)=>{
+        axios.patch("https://ashish-first-server.herokuapp.com/applications/"+id,{status:!status})
+        .then(()=>{
+            getData();
+        })
+     }
     React.useEffect(getData,[])
     console.log(jobs,applications)
     return isAdmin? (
@@ -45,30 +63,30 @@ function EmployerHome() {
                     <p> <strong>Company - </strong> {admin.companyName} | {admin.industry}</p>
                 </div>
             </div>
-        {isLoading?<Loading width="200" height="200"/> :    <div className="employerHomeMainBox">
+        {isLoading?<Loading width="200" height="200"/> :  jobs.length?  <div className="employerHomeMainBox">
                 <div className="employerJobsBox">
                     <div className="employerHomeMainBoxHead">
                          <h3>Current active posts</h3>
                     </div>
                     <div className="dataBox">
                 {jobs.length? (
-                    jobs.map(job=><EmployerJobCard key={"employerJob" + job.id } {...job}/>)
+                    jobs.map(job=><EmployerJobCard key={"employerJob" + job.id } {...job} handleDelete={handleDelete}/>)
                 ) : <h4>Empty</h4>}
                     </div>
                     
                 </div>
                 <div className="employerApplicationBox">
                     <div  className="employerHomeMainBoxHead">
-                        <h3>Current active applications</h3>
+                        <h3>Applications</h3>
                     </div>
                     <div className="dataBox">
                     {applications.length? (
-                    applications.map(application=><EmployerApplicationCard key={"employerApplication" + application.id } {...application}/>)
+                    applications.map(application=><EmployerApplicationCard key={"employerApplication" + application.id } {...application} handleToggle={handleToggle} handleApplicationDelete={handleApplicationDelete}/>)
                 ) : <h4>Empty</h4>}
 
                     </div>
                 </div>
-            </div>}
+            </div> : <WelCome />}
         </div>
     ) : <Redirect to="/employer/login" />
 }

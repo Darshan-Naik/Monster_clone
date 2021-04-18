@@ -57,10 +57,20 @@ color: white;
 .employerJobCard *{
     margin: 0;
    white-space: nowrap;
-   max-width:400px ;
+   max-width:500px ;
    overflow: hidden;
    text-overflow: ellipsis;
    
+}
+.employerJobCard>div,.flexBoxx{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.employerJobCard button{
+   background-color: transparent;
+   border: none;
 }
 .dataBox{
     height: 50vh;
@@ -77,4 +87,25 @@ color: white;
 }
 .employerApplicationCard *{
     margin: 0;
+}
+.employerApplicationCard button{
+    background-color: transparent;
+   border: none;
+}
+.welCome a{
+     text-decoration: none;
+     padding: 10px 20px;
+     border: 2px solid blue;
+     color: blue;
+     transition: all 300ms;
+}
+.welCome{
+    padding: 30px;
+    margin: 30px;
+    margin-bottom: 120px;
+}
+.welCome a:hover{
+    border: 2px solid blue;
+    color: white;
+    background-color: blue;
 }

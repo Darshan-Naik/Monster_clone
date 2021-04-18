@@ -37,7 +37,6 @@ axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
 })
  .catch((err)=>(err))   
 }
-console.log(new Date)
  useEffect(() => {
     config()
  }, [id])   
@@ -52,7 +51,8 @@ const history = useHistory()
         applyed_date : new Date,
         job_id : data.id,
         applicantName: userName,
-        applicantEmail : userEmail
+        applicantEmail : userEmail,
+        status : false
       }
     axios.post("https://ashish-first-server.herokuapp.com/applications",application)
     .then(()=>{
