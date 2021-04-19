@@ -20,7 +20,7 @@ The entire replication of the web-application is achieved using React and CSS. W
 ### 4.react-redux => State management
 ### 5.react-responsive-carousel => image carousel (login page)
 ### 6.react-router-dom => Page Routings
-### 7.react-speech-recognition => Voice recognition for job serach
+### 7.react-speech-recognition => Voice recognition for job search
 
 
 
