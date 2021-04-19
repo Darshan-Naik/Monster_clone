@@ -1,7 +1,7 @@
 # Clone of www.monster.com
-    We, as a team have replicated monster.com and tried our level best to implement most of its functionalities using React and Redux.
+### We, as a team have replicated monster.com and tried our level best to implement most of its functionalities using React and Redux.
 ### About MONSTER
-Monster is an online platform which provides services to the employers and jobseekers to post new jobs and find new jobs respectively.
+ Monster is an online platform which provides services to the employers and jobseekers to post new jobs and find new jobs respectively.
 ## Team Members
 1. Darshan Naik : (Home page,login page,signup page,reults page,filters,firebase,user authontications,job posting,apllication posting,carousels,loading animations,routings,employer section pages and authontications)
 2. Ashish Kumar : (Home page,career tips page, job description page, user profile page,adwance search page,mock server,database files)
