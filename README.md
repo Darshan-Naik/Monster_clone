@@ -3,10 +3,14 @@
 ### About MONSTER
  Monster is an online platform which provides services to the employers and jobseekers to post new jobs and find new jobs respectively.
 ## Team Members
-1. Darshan Naik : (Home page,login page,signup page,reults page,filters,firebase,user authontications,job posting,apllication posting,carousels,loading animations,routings,employer section pages and authontications)
-2. Ashish Kumar : (Home page,career tips page, job description page, user profile page,adwance search page,mock server,database files)
-3. Deepak Makkar : (Login page, sign-up page,image carousel)
-4. Kapil Pant : (Home page,footer parts)
+#### 1. Darshan Naik :
+(Home page,login page,signup page,reults page,filters,firebase,user authontications,job posting,apllication posting,carousels,loading animations,routings,employer section pages and authontications)
+#### 2. Ashish Kumar : 
+(Home page,career tips page, job description page, user profile page,adwance search page,mock server,database files)
+#### 3. Deepak Makkar :
+(Login page, sign-up page,image carousel)
+#### 4. Kapil Pant : 
+(Home page,footer parts)
 ## Technologies Used
 The entire replication of the web-application is achieved using React and CSS. We have also used firebase to mock data for feature implementation.
 # Libraries Used
