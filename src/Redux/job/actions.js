@@ -24,7 +24,7 @@ const getJobsSuccess=(payload)=>{
 
 const getJobs = (payload) => (dispatch)=>{
     dispatch(getJobsRequest())
-   return axios.get("https://ashish-first-server.herokuapp.com/job?_sort=id&_order=desc")
+   return axios.get("https://ashish-first-server.herokuapp.com/job")
             .then(res=>{
                 dispatch(getJobsSuccess(res.data))
             })

@@ -40,10 +40,10 @@ function EmployerHome() {
         // })
     }
     const handleApplicationDelete=(id)=>{
-        axios.delete("https://ashish-first-server.herokuapp.com/applications/"+id)
-        .then(()=>{
-            getData();
-        })
+        // axios.delete("https://ashish-first-server.herokuapp.com/applications/"+id)
+        // .then(()=>{
+        //     getData();
+        // })
     }
 
     const handleToggle=(id,status)=>{
