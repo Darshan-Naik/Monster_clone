@@ -7,7 +7,7 @@
     min-height: 429px;
     display: flex;
     text-align: left;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     padding: 0 50px;
@@ -15,7 +15,7 @@
 .EmployerLoginMainBanner ul li{
     background: url(https://media.monsterindia.com/recruiter_2015/india/images/icon-bg.png) no-repeat left center;
     padding-left: 45px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 52px;
     list-style: none;
@@ -27,7 +27,7 @@
     background-color: white;
     padding: 20px;
     color: black;
-    margin: 0 50px;
+    margin: 10px;
 }
 .EmployerLoginSubBox{
     display: flex;

@@ -72,7 +72,7 @@ function JobPost() {
                 <textarea type="text" cols="60" rows="4" name="description" placeholder="Description" value={description} onChange={handleChange} required/>
 
                 <div>
-                <input type="checkbox" name="work_from_home" checked={work_from_home}  onChange={handleChange} required/> <label>Remote working</label>
+                <input type="checkbox" name="work_from_home" checked={work_from_home}  onChange={handleChange} /> <label>Remote working</label>
                 </div>
                 <button type="submit">{isLoading? "Loading..." : "Post" }</button>
                 </form>

@@ -82,3 +82,9 @@
 .addBox img{
     margin: 10px;
 }
+
+@media only screen and (max-width: 992px) {
+    .addBox{
+      display: none;
+    }
+  } 

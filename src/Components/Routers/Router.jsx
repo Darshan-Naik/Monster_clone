@@ -71,7 +71,9 @@ function Router() {
                     </Route>
                 </Switch>
             
-            {isAdmin?null: <Footer /> }
+            {isAdmin?<div style={{textAlign: "left", padding: "0.5% 2%", fontSize: "14px"}} >
+            © 2021 Monster - All Rights Reserved
+        </div>: <Footer /> }
         </div>
     )
 
