@@ -1,5 +1,5 @@
 
-import { loadData, saveData } from "../../Utils/localStorage"
+import { loadData, saveData } from "../../Utils/localStorage.js"
 import { EMPLOYER_LOGIN_SUCCESS, EMPLOYER_REGISTER_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
 
 
