@@ -38,7 +38,7 @@ export const SignUp = () => {
     
       }).catch((error) => {
         dispatch(registerFailure(error.message))
-        alert("wrong credentials")
+
       });
     
     }
@@ -54,7 +54,7 @@ export const SignUp = () => {
     
       }).catch((error) => {
         dispatch(registerFailure(error.message))
-        alert("wrong credentials")
+
       });
     
     }
@@ -157,6 +157,7 @@ export const SignUp = () => {
             By registering, you agree to our Terms and Conditions, Privacy Policy and default mailer and communications settings
             governing the use of monsterindia.com.
           </p>
+          {isError && <small style={{color :"red"}} >wrong credentials</small>}
           <input value={isLoading?"Loading..." : "Register"} className={styles.btn} type="submit" />
         </form>
       </div>

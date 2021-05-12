@@ -82,14 +82,14 @@ function Results() {
             }
             return (
                 <div className="ResultBody">
-                <div>
+                <div className="resultFilterBody">
                   <div className="searchResultCount">
                       <p>Search Results - {filteredJobs.length} </p>
                     </div> 
                 <ResultFilters jobs={filteredJobs} filters={filters} handleFilter={handleFilter}/>
                 </div>
                 
-                <div>
+                <div className="resultCardContainer">
                {filters.length?( <div className="appliedFiltersList">
                         <p>Applied Filters : {filters.map(item=><span onClick={()=>removeFilter(item)}>{item}   -</span>)}</p>
                 </div>): null}
@@ -97,7 +97,7 @@ function Results() {
                     { isLoading?<div className="loadingBox"> <Loading/> </div>: filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
                     }
                 </div>
-                <div>
+                <div className="resultAddBox">
                 {!isAuth &&  (  <div className="registerAddBox">
                             <h4>NEW TO MONSTER?</h4>
                             <Link to="/seeker/registration">REGISTER WITH US</Link>

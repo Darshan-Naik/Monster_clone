@@ -17,8 +17,8 @@ const recentJobs = jobs.filter(item=>item.id<10 && !item.walk_in)
 const walkInJobs = jobs.filter(item=>item.walk_in)
     return (
         
-        <div className="flexBox maxWidth">
-            <div>
+        <div className="flexBox">
+            <div className="carouselBoxContainer">
             <Carousel jobs={workFromHomeJobs} title={"Work From Home Jobs"} isLoading={isLoading} />
             <Carousel jobs={recentJobs} title={"Recent Jobs"} isLoading={isLoading} />
             <Carousel jobs={walkInJobs} title={"Walk-in Jobs"}  isLoading={isLoading}/>

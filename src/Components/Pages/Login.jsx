@@ -7,7 +7,6 @@ import {useDispatch, useSelector} from "react-redux"
 import { useHistory } from "react-router";
 import { loginFailure, loginRequest, loginSuccess } from "../../Redux/auth/actions";
 import { auth } from "../../Utils/fireBase";
-import Loading from "./Loading";
 import firebase from "firebase/app"
 
 
@@ -37,7 +36,6 @@ return auth.signInWithEmailAndPassword(email, password)
   })
   .catch((error) => {
     dispatch(loginFailure(error.message))
-    alert("wrong credentials")
   });
 }
 
@@ -52,7 +50,6 @@ const handleGoogleSingIn =()=>{
 
   }).catch((error) => {
     dispatch(loginFailure(error.message))
-    alert("wrong credentials")
   });
 
 }
@@ -67,7 +64,6 @@ const handleFacebookSignIN =()=>{
 
   }).catch((error) => {
     dispatch(loginFailure(error.message))
-    alert("wrong credentials")
   });
 
 }
@@ -76,7 +72,7 @@ const handleFacebookSignIN =()=>{
   return isAuth? <Redirect to="/" push/> : (
     <div className={styles.loginflex}>
       <div className={styles.car}>
-      {isLoading? <Loading height={500} width={700} /> :    <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={3000}>
+       <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={3000}>
           <div>
             <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg" />
             <h2 className={styles.head2}>Job Alerts</h2>
@@ -92,7 +88,7 @@ const handleFacebookSignIN =()=>{
             <h2 className={styles.head2}>Apply Quickly</h2>
             <span className={styles.subHead}>Save Time and Effort with monster Quick Apply</span>
           </div>
-        </Carousel> }
+        </Carousel> 
       </div>
       <div className={styles.logFm}>
         <h2 className={styles.mainHead}>Hello!</h2>
@@ -112,6 +108,7 @@ const handleFacebookSignIN =()=>{
             <Link >Forgot password</Link>
           </div>
           <br />
+         {isError && <small style={{color :"red"}} >wrong credentials</small>}
      <input type="submit" className={styles.btn} value={isLoading? "Loading..." : "Login"} />
           <br />
         </form>
