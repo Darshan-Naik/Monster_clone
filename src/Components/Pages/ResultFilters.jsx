@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import FilterCard from './FilterCard'
 
 function ResultFilters({jobs,filters,handleFilter}) {
-const [func,setFunc] = React.useState([])
-const [role,setRole] = React.useState([])
-const [experience,setExperience] = React.useState([])
-const [city,setCity] = React.useState([])
-const [skills,setSkills] = React.useState([])
+const [func,setFunc] = React.useState([]) //function filter
+const [role,setRole] = React.useState([]) //role filter
+const [experience,setExperience] = React.useState([]) //experience filter
+const [city,setCity] = React.useState([]) //city filter
+const [skills,setSkills] = React.useState([]) //skills filter
 const isAuth = useSelector(store=>store.auth.isAuth)
 
 React.useEffect(()=>{

@@ -5,6 +5,7 @@
   grid-template: "cr lf";
   margin: auto;
   margin-top: 20px;
+  place-items: center;
 }
 .car {
   grid-area: cr;
@@ -132,3 +133,9 @@
   border: none;
   background-color: transparent;
 }
+
+@media only screen and (max-width: 992px) {
+  .car{
+    display: none;
+  }
+} 

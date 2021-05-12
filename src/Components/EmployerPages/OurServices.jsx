@@ -16,7 +16,7 @@ function OurServices() {
     },
     {
         img : "https://media4.monsterindia.com/recruiter_2015/india/images/Monster-Social-1.jpg",
-        head: "Monster Social Job Ads (MSJ)",
+        head: "Monster Social Job Ads",
         description : "Use the power of MSJ to take your job posting to a large pool of active and passive job seekers on social media & beyond. Find Better, Faster"
     }
 

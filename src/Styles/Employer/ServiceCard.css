@@ -14,6 +14,11 @@
 }
 .serviceCard>div{
     padding: 10px;
+    height: 250px;
+
+}
+.serviceCard>div p{
+  min-height: 120px;
 }
 .OurServices{
     display: flex;

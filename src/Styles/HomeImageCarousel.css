@@ -24,7 +24,7 @@
 .MainImageBox{
     text-align: left;
     margin:10px auto;
-    width: 1100px;
+   max-width: 1100px;
     border: 1px solid rgba(151, 151, 151, 0.322);
     padding: 0 15px 25px 15px;
     position: relative;
