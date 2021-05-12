@@ -3,7 +3,7 @@ background-color: white;
 padding:0 10px;
 margin: 2px;
 text-align: left;
-width: 200px;
+max-width: 200px;
 }
 
 .displayNone{
