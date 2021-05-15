@@ -1,33 +1,33 @@
 .careerTip{
-    width: 65%;
+width: 780px;
 height:fit-content;
 background: white;
-margin: auto;
+margin-left: 8%;
 font-family: unset;
 display: flex;
 flex-wrap: wrap;
-padding: 10px;
+padding: 18px;
 }
 .careerDataDiv{
-width:40%;
+width:45%;
 height: fit-content;
 margin: 10px;
 display: flex;
 flex-direction: row;
+margin-bottom: -30px;
 
 }
 .careerIdDiv{
     width: 15%;
     text-align: center;
     color: grey;
+    padding-top: 12px;
+    padding-right: 5px;
 
 }
 .careerTitleDiv{
-    width: 84%;
+   
     text-align: left;
-    height: 30px;
-
-
 }
 .careerTitleDiv>p{
 margin-top: -15px;
@@ -38,10 +38,46 @@ color: grey;
 .careerTip>p{
 
    color: blue;
-
    margin-left: 800px
 }
 .careerTip>h3{
-   margin-right: 600px;
+  text-align: left;
+  margin-right: 200px;
     margin-left: 30px;
+}
+.careerTitleDiv>h5{
+    font-size: 17px;
+    font-weight: 400;
+     
+     }
+@media only screen and (max-width: 992px) {
+  
+    .careerTip{
+       
+        display: flex;
+        flex-direction: column;
+        width: 77%;
+        height: 800px;
+        }
+        .careerDataDiv{
+            width:94%;
+           margin-bottom: -30px;
+          
+            
+            }
+            .careerTitleDiv>h5{
+               font-size: 17px;
+               font-weight: 400;
+                
+                }
+            .careerTip>h3{
+               
+                margin-right: 70px;
+                 
+              }
+              .careerIdDiv{
+                  padding-top: 12px;
+              }
+      
+
 }
