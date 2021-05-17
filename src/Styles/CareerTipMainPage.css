@@ -7,10 +7,11 @@
 .MainTip_1>p{
     width: 100%;
     background-color:rgb(109,84,218) ;
-    height: 80px;
+    min-height: 80px;
     color: white;
     font-size: 40px;
     padding-top: 20px;
+    height: fit-content;
 }
 .mainTip_1_1{
     margin: auto;
@@ -23,16 +24,18 @@
   width: 75%;
    display: flex;
    flex-wrap: wrap;
+
   
 
 
 }
 .mainTip_1_1_2{
-     width: 26%;
+     width: 34%;
      font-size: 12px;
      text-align: left;
      background-color: white;
      height: 323px;
+     margin-left: 25px;
 }
 .mainTip_1_1_2>ul{
     width: 87%;
@@ -59,24 +62,28 @@
    margin-right: 20px;
  }
 .mainTip_1_1_1_1{
-    width: 11%;
+    width: 18%;
+    min-width: 100px;
     height: 130px;
     border: 1px solid rgb(218, 214, 214);
     font-size: 12px;
     padding: 10px 20px;
     font-weight: 500;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
 }
 .mainTip_1_1_1_1>div{
-    width: 50px;
-    height: 40px;
+    width: fit-content;
+    height: fit-content;
     object-fit: contain;
-    margin-bottom: 50px;
-    
-    
+    margin: auto;
 }
 .mainTip_1_1_1_1>div>img{
     width: 80px;
     height: 80px;
+   
 }
 .mainTip_1_1_1_1:hover{
     background-color: white;
@@ -119,6 +126,7 @@
     
 }
 .carrer_article_details{
+   
     margin: auto;
     font-size: 14px;
     color: rgb(141, 139, 139);
@@ -127,15 +135,53 @@
     text-align: left;
 }
 #btn{
-    display: grid;
-    place-items: center;
-    height: 35px;
+  font-size: medium;
+    padding: 0.5rem;
     width:100px;
+    outline: none;
+    border: none;
     background-color: rgb(109,84,218);
     color: white;
-    margin-left: 130px;
+  
+
+  
 }
 .carrer_article_data:hover{
    
     cursor: pointer;
+}
+@media only screen and (max-width: 992px) {
+  .mainTip_1_1{
+      flex-direction: column;
+  }
+  .mainTip_1_1_2{
+      width: 100%;
+      height: fit-content;
+      margin-left: 0px;
+  }
+  .mainTip_1_1_1{
+      width: 100%;
+     
+     
+  }
+  .mainTip_1_1_1_1{
+      width: 37%;
+
+      }
+      .carrer_article_data{
+          width: 100%;
+          height: fit-content;
+          text-align: left;
+          align-items: flex-end;
+      }
+      .carrer_article_details{
+       padding-left: 10px;
+        width: 100%;
+      }
+    
+
+
+
+ 
+
 }

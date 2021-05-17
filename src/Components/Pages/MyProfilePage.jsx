@@ -8,6 +8,7 @@ function MyProfilePage() {
 
 const Data = useSelector(store=>store.auth.userData)
 
+console.log(Data)
 return (
 <div>
     <div className="profile_head">

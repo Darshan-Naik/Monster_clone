@@ -2,10 +2,12 @@ import React from 'react'
 import './../../Styles/Resumeservices.css'
 function Resumeservices() {
 return (
+   
 <div className="monster">
     <div className="header">
         <h2>Resume Services</h2>
     </div>
+    <div className="card_body">
     <div className="resume__card">
         <img src="https://media.monsterindia.com/trex/prod-cdn/media/product/2018/october/1lVkq2Yfi8Hg1rOMrLYrljGmkHzWCpetLiZTFjkT.png"
             alt="" />
@@ -25,7 +27,7 @@ return (
         <div className="resume__description">
             <h4>Xpress Resume+</h4>
             <p>
-                Speed up your job hunt with XpressResume+ Find Better. Faster!
+                Speed up your job hunt with Xpress Resume+ Find Better. Faster!
             </p>
             <h3>Read More</h3>
         </div>
@@ -40,6 +42,7 @@ return (
             </p>
             <h3>Read More</h3>
         </div>
+    </div>
     </div>
     <div className="mobile__number">
         <div>

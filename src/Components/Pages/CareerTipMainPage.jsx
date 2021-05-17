@@ -52,7 +52,9 @@ return(
                 <div className="carrer_article_details">
                     <p> {trunket(item.details,130)}</p>
                 </div>
-                <div id="btn">Read More</div>
+                <div style={{textAlign:"right", width:"97%",paddingBottom:"10px"}}>
+                    <button id="btn"> Read More</button>
+                   </div>
             </div>)}
         </div>
     </div>

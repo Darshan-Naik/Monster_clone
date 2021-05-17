@@ -6,7 +6,7 @@ return (
 <div className="courses">
     <div className="courses__header">
         <h2>Courses & Certifications</h2>
-        <h3>View All </h3>
+       
     </div>
     <div className="courses__description">
         <p>Fast track your way up the career

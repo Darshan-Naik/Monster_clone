@@ -1,31 +1,42 @@
 
 .monster{
-   width: 900px;
+   width:90%;
+   max-width: 800px;
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    margin: auto;
-    margin-left: 17%;
-}
-.header{
-    padding-right: 70%;
-    padding-left: 33px;
+   justify-content: center;
+   margin-left: 8%;
+  
+  
+
+   
 }
 
+.header{
+    
+    padding-left: 33px;
+}
+.card_body{
+    overflow-X: scroll;
+    display: flex;
+}
 .resume__card{
     margin: 10px;
     display: flex;
     background-color: rgb(240, 239, 239);
-    width: 270px;
+    width: 500px;
     flex-direction: row;
+    
     
 }
 .resume__description{
     display: flex;
     flex-direction: column;
-    width: 130px;
+    width: 140px;
     margin-top: -17px;
-    padding-left: 25px;
+    padding-left: 15px;
+    text-align: left;
 }
 
 .resume__description>p{
@@ -52,29 +63,33 @@
    color: white;
    padding-left: 20px;
    font-size: 14px;
+   flex-direction: row;
+   line-height: 15px;
 }
 
 
 .mobile__number>input{
-    width: 19rem;
+    width: 15rem;
     height: 30px;
     padding: 10px;
     font-size: 14px;
     font-weight: 500;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 20px;
     border-radius: 4px 0px 0px 4px;
     border: none;
 }
 .mobile__number>button{
     width: 13rem;
-    height: 49px; 
-    margin-top: 25px ;
+    height: 50px; 
+    margin-top: 15px ;
     background-color:rgb(244,166,34);
     border: none;
     font-size: 14px;
     font-weight: 600;
     color: white;
+    border-radius: 0px 4px 4px 0px;
+    margin-right: 20px;
 }
 
 .mobile__number>button:hover{
@@ -86,3 +101,30 @@
     outline: none;
     
 }
+@media only screen and (max-width: 992px) {
+
+    .monster{
+        width:80%;
+    }
+
+
+    .mobile__number{
+        display: flex;
+       flex-direction: column;
+       margin: auto;
+    }
+    .mobile__number>input{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 4px 4px 4px 4px;
+       
+    }
+        .mobile__number>button{
+            width: 64%;
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 4px 4px 4px 4px;
+            
+        }
+  } 

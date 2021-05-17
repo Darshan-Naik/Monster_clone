@@ -117,9 +117,9 @@ const history = useHistory()
              <div>{data.about}</div>
          </div>
        </div>
-      {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id != id).length? <div className="similarJobs">
+      {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id !== id).length? <div className="similarJobs">
           <h2>Similar Jobs</h2>
-          {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id != id)
+          {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id !== id)
           .map(item=><ResultCard {...item}/>)}
         </div> : null}
     </div>

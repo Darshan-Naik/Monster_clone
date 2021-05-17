@@ -1,7 +1,10 @@
 .courses{
-    width: 65%;
-    height: 500px;
-    margin: auto;
+    width: 800px;
+    min-height:800px ;
+    
+    height: fit-content;
+    min-height: 500px;
+    margin-left: 8%;
     background-color: white;
     margin-bottom: 10px;
     margin-top: 15px;
@@ -34,6 +37,7 @@
     width: 250px;
     height: 300px;
     margin-left: 50px;
+    margin-bottom: 10px;
 }
 .coursescard__header{
     background-color: rgb(73,145,227);
@@ -62,4 +66,17 @@
     font-size: 12px;
     list-style-type: symbols(">");
     margin: 8px 0;
+}
+@media only screen and (max-width: 992px) {
+  .courses__cards{
+      display: flex;
+      flex-direction: column;
+      min-height: 680px;
+      justify-content: space-around;
+      
+      
+  }  
+  .courses{
+   width: 80%;
+  }
 }
