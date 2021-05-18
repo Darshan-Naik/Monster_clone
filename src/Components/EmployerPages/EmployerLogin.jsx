@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, Redirect, useHistory } from 'react-router-dom'
-import { employerLogin, employerLoginSuccess, loginFailure, loginRequest } from '../../Redux/auth/actions'
+import { employerLoginSuccess, loginFailure, loginRequest } from '../../Redux/auth/actions'
 import "../../Styles/Employer/EmployerLogin.css"
 import OurServices from './OurServices'
 
@@ -25,7 +25,7 @@ const handleChange =(e)=>{
 
 const handleLogin=()=>{
     dispatch(loginRequest())
-    axios.get("https://ashish-first-server.herokuapp.com/employers?"+"email="+user.email+"&&" + "password="+user.password)
+    axios.get(`https://ashish-first-server.herokuapp.com/employers?email=${user.email}&&password=${user.password}`)
     .then((res)=> {
         const user = res.data[0]
         if(user){

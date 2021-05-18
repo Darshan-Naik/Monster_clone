@@ -52,8 +52,8 @@ function EmployerHome() {
             getData();
         })
      }
-    React.useEffect(getData,[])
-    console.log(jobs,applications)
+    React.useEffect(getData)
+
     return isAdmin? (
         <div>
             <div className="employerHomeBanner">

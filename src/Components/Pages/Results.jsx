@@ -91,7 +91,7 @@ function Results() {
                 
                 <div className="resultCardContainer">
                {filters.length?( <div className="appliedFiltersList">
-                        <p>Applied Filters : {filters.map(item=><span onClick={()=>removeFilter(item)}>{item}   -</span>)}</p>
+                        <p>Applied Filters : {filters.map(item=><span key={item} onClick={()=>removeFilter(item)}>{item}   -</span>)}</p>
                 </div>): null}
                     
                     { isLoading?<div className="loadingBox"> <Loading/> </div>: filteredJobs.map(job=><ResultCard key={job.id} {...job} />)
@@ -111,7 +111,7 @@ function Results() {
                         <img src="https://www.monsterindia.com/srp/images/career-booster-icon.png" alt="add"/>
                         <h2>CAREER BOOSTER</h2>
                         <p>GIVE YOUR CAREER A BOOST WITH MONSTER'S RESUME SERVICES.</p>
-                        <Link>Know more</Link>
+                        <Link to="/">Know more</Link>
                     </div>
                     <JobSearchBySkills />
                 </div>

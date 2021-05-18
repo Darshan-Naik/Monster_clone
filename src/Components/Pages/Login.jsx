@@ -74,17 +74,17 @@ const handleFacebookSignIN =()=>{
       <div className={styles.car}>
        <Carousel showThumbs={false} showArrows={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={3000}>
           <div>
-            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg" />
+            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_1.svg" alt="logo"/>
             <h2 className={styles.head2}>Job Alerts</h2>
             <span className={styles.subHead}>Get real time alerts now for hot new Jobs</span>
           </div>
           <div>
-            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_2.svg" />
+            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_2.svg" alt="logo"/>
             <h2 className={styles.head2}>Find Better</h2>
             <span className={styles.subHead}>Find job that match your skills across top employers in the country</span>
           </div>
           <div>
-            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_3.svg" />
+            <img className={styles.gridIm} src="https://www.monsterindia.com/rio/public/images/carousel_3.svg" alt="logo"/>
             <h2 className={styles.head2}>Apply Quickly</h2>
             <span className={styles.subHead}>Save Time and Effort with monster Quick Apply</span>
           </div>
@@ -105,7 +105,7 @@ const handleFacebookSignIN =()=>{
             }} />
           <br />
           <div className={styles.forget}>
-            <Link >Forgot password</Link>
+            <Link to="/">Forgot password</Link>
           </div>
           <br />
          {isError && <small style={{color :"red"}} >wrong credentials</small>}
@@ -121,10 +121,10 @@ const handleFacebookSignIN =()=>{
           <div className={styles.social}> 
             <span className={styles.spaan}> Or Login via socials</span>
             <button onClick={handleFacebookSignIN}>
-              <img src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
+              <img src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" alt="logo"/>
             </button>
             <button onClick={handleGoogleSingIn}>
-              <img src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
+              <img src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" alt="logo"/>
             </button>
           </div>
           <hr />

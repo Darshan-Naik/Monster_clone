@@ -60,29 +60,29 @@ const handleSubmit=(e)=>{
                         <div className='input'>
                             <input list="company" name="company" placeholder='Company Name' value={company} onChange={handleChange} />  
                         <datalist id="company">
-                        {Companydata.map((item)=><option value={item} />) }
+                        {Companydata.map((item)=><option key={item}  value={item} />) }
                         </datalist>
                         </div>
                         <div className='input'>
                             <input list="jobtype" name="jobtype" placeholder='Type' value={jobtype} onChange={handleChange} />  
                         <datalist id="jobtype">
-                        {Jobtypedata.map((item)=><option value={item} />) }
+                        {Jobtypedata.map((item)=><option key={item} value={item} />) }
                         </datalist>
                         </div>
                         <div className='input'>
                             <input list="Role" name="Role" placeholder='Job Role' value={Role} onChange={handleChange} />  
                         <datalist id="Role">
-                        {Roledata.map((item)=><option value={item} />) }
+                        {Roledata.map((item)=><option key={item} value={item} />) }
                         </datalist>
                         </div>
                         <div className="multipleInputs" >
                             <input list="min_salary" className='inputi' name="min_salary" placeholder='Minimum Salary' value={min_salary} onChange={handleChange} />  
                         <datalist id="min_salary">
-                        {Minimumsalary.map((item)=><option value={item} />) }
+                        {Minimumsalary.map((item)=><option key={item} value={item} />) }
                         </datalist>
                         <input list="max_salary" className='inputi' name="max_salary" placeholder='Maximum Salary' value={max_salary} onChange={handleChange} />  
                         <datalist id="max_salary">
-                        {Maximumsalary.map((item)=><option value={item} />) }
+                        {Maximumsalary.map((item)=><option key={item} value={item} />) }
                         </datalist>
                         </div>
                         <input className="search_button" type="submit" value="SEARCH" onClick={handleSubmit}/>
@@ -91,7 +91,7 @@ const handleSubmit=(e)=>{
                         </form>
                     <div className="searchjob_searchTipBody">
                         <p>search Tips</p>
-                    { Tips.map((item)=> <div className="searchTip_body">
+                    { Tips.map((item)=> <div key={item.title} className="searchTip_body">
                         {/* <div className="tipImage_body">
                         <img src="" alt="logo"/>
                         </div> */}

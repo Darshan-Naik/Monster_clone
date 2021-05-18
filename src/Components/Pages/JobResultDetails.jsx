@@ -37,9 +37,7 @@ axios.get("https://ashish-first-server.herokuapp.com/job/"+id)
 })
  .catch((err)=>(err))   
 }
- useEffect(() => {
-    config()
- }, [id])   
+ useEffect(config,[id])   
 const history = useHistory()
  const handleApply=(e)=>{
    if(!isAuth){
@@ -48,7 +46,7 @@ const history = useHistory()
       const application ={
         employerId : data.employerId,
         job_title : data.job_title,
-        applyed_date : new Date,
+        applyed_date : new Date(),
         job_id : data.id,
         applicantName: userName,
         applicantEmail : userEmail,
@@ -81,7 +79,7 @@ const history = useHistory()
               <div id="JobCard_1_2_1" >
               <div>
                   <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-512.png" alt=""/>
-                <p style={{marginTop:"-24px",marginLeft:"20px"}}>{data?.location.map((item)=><span>{item}, </span>)}</p> 
+                <p style={{marginTop:"-24px",marginLeft:"20px"}}>{data?.location.map((item)=><span key={item}>{item}, </span>)}</p> 
               </div>
               <div>
                 <img src="https://pics.freeicons.io/uploads/icons/png/16650192161582800237-512.png" alt=""/>
@@ -100,7 +98,7 @@ const history = useHistory()
              </div>  
              <div id="JobCard_2_1">
                  <ul>
-                {data.description.map((item)=><li>{item}</li>)}
+                {data.description.map((item)=><li key={item}>{item}</li>)}
                  </ul>
              </div>
          </div>
@@ -109,7 +107,7 @@ const history = useHistory()
               <p>Job Details</p>
               <div><strong>Role : </strong>{data.Role}</div>
               <div><strong>Company Url : </strong>{data.company_url}</div>
-              { data.skills && <div className="skill"><strong>Skills:</strong> {data.skills.map((item)=><span><div className="JobCard_3_1_skill">{item}</div></span>)}</div>}
+              { data.skills && <div className="skill"><strong>Skills:</strong> {data.skills.map((item)=><span key={item}><div className="JobCard_3_1_skill">{item}</div></span>)}</div>}
               <div><strong>Contact Hr : </strong>{data.contact_hr}</div>
           </div>
          <div id="JobCard_3">
@@ -120,7 +118,7 @@ const history = useHistory()
       {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id !== id).length? <div className="similarJobs">
           <h2>Similar Jobs</h2>
           {jobs.filter(item=>JSON.stringify(item).includes(data.job_title) &&item.id !== id)
-          .map(item=><ResultCard {...item}/>)}
+          .map(item=><ResultCard key={item.id} {...item}/>)}
         </div> : null}
     </div>
     )

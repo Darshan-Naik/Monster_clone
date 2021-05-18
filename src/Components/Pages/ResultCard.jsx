@@ -9,7 +9,7 @@ function ResultCard({job_title,company_url,job_type,company_name,location,experi
         <div className="resultCard">
             <Link to={"/result/job/"+id}><div>          
                 <h4>{job_title} / {job_type}</h4>
-                <a target="_blank" href={company_url}>{company_name}</a>
+                <a  href={company_url}>{company_name}</a>
                 <div className="flexBox space">
                     <p>
                         <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-512.png" alt="Location"/>
