@@ -26,7 +26,7 @@ function OurServices() {
             <p>Our <strong>Services</strong></p>
             <small>For employers who need great people. Find Better, Faster.</small>
             <div className="OurServices">
-            {data.map(item=><ServiceCard {...item}/>)}
+            {data.map(item=><ServiceCard key={item.img} {...item}/>)}
             </div>
            
         </div>

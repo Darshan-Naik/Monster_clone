@@ -11,9 +11,6 @@ const isAuth = useSelector(store=>store.auth.isAuth)
 const userEmail = useSelector(store=>store.auth.userData.email)
 const userName = useSelector(store=>store.auth.userData.displayName)
 const profilePic = useSelector(store=>store.auth.userData.photoURL)
-const userData = useSelector(store=>store.auth.userData)
-
-console.log(userData)
 const [state,setState] = React.useState(true)
 const dispatch = useDispatch()
 const handleLogout=()=>{
@@ -30,7 +27,7 @@ const handleLogout=()=>{
                <Link to="/result/work from home">WORK FROM HOME</Link>
                <Link to="/career-tips">CAREER TIPS</Link>
                <Link to="/resume-services">RESUME SERVICES</Link>
-               <Link>MORE</Link>
+               <Link to="/">MORE</Link>
             </div>
             <div className="navBarCards">
                 <div className="covidCard">

@@ -8,7 +8,7 @@ import RegisterAdd from './RegisterAdd'
 function JobCarousel() {
 
 const dispatch = useDispatch()
-const {jobs,isLoading,isError} = useSelector(store=>store.job)
+const {jobs,isLoading} = useSelector(store=>store.job)
 React.useEffect(()=>{
     dispatch(getJobs())
 },[dispatch])

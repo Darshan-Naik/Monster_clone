@@ -11,7 +11,7 @@ export const SignUp = () => {
   const [password, setPassword] = React.useState("");
   const dispatch = useDispatch();
   const history = useHistory()
-  const {isLoading,isError,iaAuth} = useSelector(store=>store.auth)
+  const {isLoading,isError} = useSelector(store=>store.auth)
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -66,11 +66,11 @@ export const SignUp = () => {
         <p className={styles.subHead}>It only takes a couple of minutes to get started</p>
         <div className={styles.socialLinks}>
           <button onClick={handleGoogleSingIn}>
-            <img className={styles.socIcons} src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
+            <img className={styles.socIcons} src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" alt="logo"/>
             <span className={styles.goo}>Signup with Google</span>
           </button>
           <button onClick={handleFacebookSignIN}>
-            <img className={styles.socIcons} src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
+            <img className={styles.socIcons} src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" alt="logo"/>
             <span className={styles.goo}>Signup with Facebook</span>
           </button>
         </div>

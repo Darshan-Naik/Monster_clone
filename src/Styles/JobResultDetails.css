@@ -39,7 +39,7 @@
 }
 #JobCard_1_2_1{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   color: gray;
 } 
 #JobCard_1_2>p{

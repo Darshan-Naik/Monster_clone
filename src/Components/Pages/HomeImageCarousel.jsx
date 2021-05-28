@@ -35,7 +35,7 @@ return (
     <h2>Employers Choice</h2>
     <div className="PrvBtn">
         <button onClick={handleScrollLeft}>{"<"}</button> </div> <div ref={scrollBar}className="ImageBox">
-                { ImageCarousel.map(item=><img style={{marginRight:"20px"}} src={item} alt="logo" />)}
+                { ImageCarousel.map(item=><img key={item} style={{marginRight:"20px"}} src={item} alt="logo" />)}
     </div>
     <div className="NxtBtn">
         <button onClick={handleScrollRight}>{">"}</button>

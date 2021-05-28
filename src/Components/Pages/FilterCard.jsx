@@ -6,7 +6,7 @@ function FilterCard({title,data,filters,handleFilter}) {
         <div className="filterCard">
             <div className="flexBox filterCardHead"><p>{title}</p> <button onClick={()=>setState(state=>!state)}>{state? "+" : "-"}</button></div>
             <div className={state?"displayNone" : "filterList"}>
-                {data.map(item=><div> <input type="checkbox" onChange={handleFilter} checked={filters.includes(item)} name={item} /> <label>{item}</label></div>)}
+                {data.map(item=><div key={item}> <input type="checkbox" onChange={handleFilter} checked={filters.includes(item)} name={item} /> <label>{item}</label></div>)}
             </div>
         </div>
     )

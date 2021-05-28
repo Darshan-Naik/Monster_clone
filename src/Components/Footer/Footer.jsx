@@ -130,9 +130,9 @@ function Footer() {
             </div>
 
             <div className="relative flexBox">
-            <img width="30px" src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" />
-            <img width="30px" src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" />
-            <img width="40px" src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" />
+            <img width="30px" src="https://iconape.com/wp-content/png_logo_vector/facebook-f-logo-2019.png" alt="logo" />
+            <img width="30px" src="https://freepngimg.com/download/google/67060-play-photos-search-google-account-png-file-hd.png" alt="logo"/>
+            <img width="40px" src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="logo" />
             
             </div>
         </div>
@@ -146,30 +146,30 @@ function Footer() {
                 <li> <Link  to="/login">Upload Resume</Link> </li>
                 <li> <Link to="/career-tips">Career Advice</Link> </li>
                 <li> <Link to="/job-search" >Search Tips</Link> </li>
-                <li> <Link>Free Job Alert</Link> </li>
+                <li> <Link to="/">Free Job Alert</Link> </li>
                 <li> <Link to="/job-search">Find Companies</Link> </li>
-                <li> <Link>Help</Link> </li>
+                <li> <Link to="/">Help</Link> </li>
             </ul>
 
             <ul>Employers
-                <li> <Link >Employer Login</Link> </li>
-                <li> <Link>Job Posting</Link> </li>
-                <li> <Link>Access Resume Database</Link> </li>
-                <li> <Link>Join mRecruiters</Link> </li>
-                <li> <Link>Advertise with us</Link> </li>
-                <li> <Link>Research Reports</Link> </li>
-                <li> <Link>Buy Online</Link> </li>
+                <li> <Link to="/">Employer Login</Link> </li>
+                <li> <Link to="/">Job Posting</Link> </li>
+                <li> <Link to="/">Access Resume Database</Link> </li>
+                <li> <Link to="/">Join mRecruiters</Link> </li>
+                <li> <Link to="/">Advertise with us</Link> </li>
+                <li> <Link to="/">Research Reports</Link> </li>
+                <li> <Link to="/">Buy Online</Link> </li>
             </ul>
 
             <ul>Monster
-                <li> <Link>About Us</Link> </li>
-                <li> <Link>Contact Us</Link> </li>
-                <li> <Link>Career with Us</Link> </li>
-                <li> <Link>Send Feedback</Link> </li>
-                <li> <Link>Testimonials</Link> </li>
-                <li> <Link>HTML Sitemap</Link> </li>
-                <li> <Link>XML Sitemap</Link> </li>
-                <li> <Link>Jobs App</Link> </li>
+                <li> <Link to="/">About Us</Link> </li>
+                <li> <Link to="/">Contact Us</Link> </li>
+                <li> <Link to="/">Career with Us</Link> </li>
+                <li> <Link to="/">Send Feedback</Link> </li>
+                <li> <Link to="/">Testimonials</Link> </li>
+                <li> <Link to="/">HTML Sitemap</Link> </li>
+                <li> <Link to="/">XML Sitemap</Link> </li>
+                <li> <Link to="/">Jobs App</Link> </li>
             </ul>
 
             <ul>Stay Connected
@@ -181,11 +181,11 @@ function Footer() {
             </ul>
 
             <ul>Legal
-                <li> <Link>Security and Fraud</Link> </li>
-                <li> <Link>Privacy Policy</Link> </li>
-                <li> <Link>Terms of Use</Link> </li>
-                <li> <Link>Be Safe</Link> </li>
-                <li> <Link>Complaints</Link> </li>
+                <li> <Link to="/">Security and Fraud</Link> </li>
+                <li> <Link to="/">Privacy Policy</Link> </li>
+                <li> <Link to="/">Terms of Use</Link> </li>
+                <li> <Link to="/">Be Safe</Link> </li>
+                <li> <Link to="/">Complaints</Link> </li>
             </ul>
         </div>
 

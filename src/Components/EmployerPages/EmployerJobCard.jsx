@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 import React from 'react'
 
 function EmployerJobCard({job_title,id,description,handleDelete}) {
