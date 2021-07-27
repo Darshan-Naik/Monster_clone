@@ -37,4 +37,6 @@ The entire replication of the web-application is achieved using React and CSS. W
 ### 7.react-speech-recognition => Voice recognition for job search
 
 
+## Snapshot 📷
+![monster](https://user-images.githubusercontent.com/77038690/127118899-376ff30b-9550-44f7-828f-f487dcbc729d.jpg)
 
