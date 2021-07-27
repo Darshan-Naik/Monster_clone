@@ -20,7 +20,7 @@ You can also take the glimpse of our Project,just follow the below steps:
 
     1.run the command npm run start in terminal to start the app at port 3000.
 
-    2.Go to the browser you will land in the landing page just Register and login if you have signed up before or do the signup.
+    2.Go to the browser you will land in the Hame page and start serching.
 
 <br>
 
